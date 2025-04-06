@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const navbarRef = useRef(null);
@@ -15,7 +16,7 @@ export default function Home() {
     // Set initial navbar height
     updateNavbarHeight();
 
-    // Optionally update on resize
+    // Update on resize
     window.addEventListener("resize", updateNavbarHeight);
     return () => window.removeEventListener("resize", updateNavbarHeight);
   }, []);
@@ -23,88 +24,129 @@ export default function Home() {
   return (
     <div className="relative w-full min-h-screen bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat">
       {/* Navbar */}
-      <nav
+      <motion.nav
         ref={navbarRef}
-        className="relative top-0 left-0 w-full flex items-center justify-between px-6 md:px-12 py-6 md:pb-6 md:pt-10 z-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative top-0 left-0 w-full flex items-center justify-between px-6 md:px-24 py-6 md:pb-6 md:pt-10 z-10"
       >
         {/* Logo & Title */}
         <div className="flex items-center gap-2">
-          <div className="flex w-10 h-10 items-center justify-center">
+          <motion.div
+            className="flex w-10 h-10 items-center justify-center"
+            whileHover={{ scale: 1.1 }}
+          >
             <img
-              src="/logo.png"
+              src="/logo-3.png"
               alt="Clinic Logo"
-              className="absolute object-contain max-w-[70px] max-h-[70px]"
+              className="absolute object-contain max-w-[155] max-h-[72px]"
             />
-          </div>
-          {/* <img
-            src="/logo-placeholder.png"
-            alt="Clinic Logo"
-            className="w-10 h-10 object-contain"
-          /> */}
-
+          </motion.div>
           {/* Navigation Links */}
-          <ul className="hidden px-10 md:flex ml-8 gap-8 text-[#05294a]">
-            <li className="cursor-pointer hover:opacity-80 font-semibold">
-              Home
-            </li>
-            <li className="cursor-pointer hover:opacity-80 font-semibold">
-              About
-            </li>
-            <li className="cursor-pointer hover:opacity-80 font-semibold">
-              Services
-            </li>
-            <li className="cursor-pointer hover:opacity-80 font-semibold">
-              Contact
-            </li>
-          </ul>
+          <motion.ul
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="hidden px-10 md:flex ml-12 gap-8 text-[#05294a]"
+          >
+            {["Home", "About", "Services", "Contact"].map((item, i) => (
+              <motion.li
+                key={i}
+                className="cursor-pointer hover:opacity-80 font-semibold"
+                whileHover={{ scale: 1.05 }}
+              >
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
         </div>
         {/* Book Button */}
-        <button className="bg-[#004a7f] text-white px-4 py-2 rounded-md hover:bg-[#00375e]">
-          Book Appointment
-        </button>
-      </nav>
-
-      {/* HEADER & SERVICES SECTIONS */}
-      <div
-        className="landing-div"
-        style={{ height: `calc(100vh - ${navbarHeight}px)` }}
-      >
-        {/* Header Section */}
-        <div
-          className="relative flex md:flex-row items-center mx-auto py-20 px-6 md:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px]"
-          style={{ height: "60%", minHeight: "20rem" }}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-[#004a7f] text-white px-4 py-2 rounded-md hover:bg-[#00375e]"
         >
-          {/* Left side: text */}
-          <div className="w-full md:w-1/2">
-            <h6 className="text-xl mb-2 md:text-xl 2xl:text-2xl font-semibold">
-              Your Health, Our Priority
-            </h6>
-            <h1 className="leading-tight font-bold mb-6 text-[#0a192a] text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl">
-              {/* We<span className="text-red-400">Care</span> */}
-              WeCare
-              <br className="hidden md:block" />
-              Walk-In Clinic & Pharmacy
-            </h1>
-            <button className="bg-[#004a7f] text-white px-6 py-3 rounded-md hover:bg-[#00375e] text-md 2xl:text-xl">
-              Book Appointment
-            </button>
-          </div>
-          {/* Right side: empty for BG image */}
-          <div className="w-full md:w-1/2" />
-        </div>
+          Book Appointment
+        </motion.button>
+      </motion.nav>
 
-        {/* Services Section */}
-        <div
+      {/* Landing Section */}
+      <motion.div
+        className="landing-div flex flex-col justify-between"
+        style={{ height: `calc(100vh - ${navbarHeight}px)` }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        {/* Header Section (top) */}
+        <motion.div
+          style={{
+            height: "62%",
+            minHeight: "22em",
+          }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
+          <motion.div
+            className="flex h-full items-center mx-auto py-20 px-6 md:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <motion.div
+              className="w-full md:w-1/2"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.6 }}
+            >
+              <h6 className="text-xl mb-2 md:text-xl 2xl:text-2xl font-semibold">
+                Your Health, Our Priority
+              </h6>
+              <h1 className="leading-tight font-bold mb-6 text-[#0a192a] text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl">
+                Family Practice
+                <br className=" md:block" />
+                Walk-In Clinic & Pharmacy
+              </h1>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#004a7f] text-white px-6 py-3 rounded-md hover:bg-[#00375e] text-md 2xl:text-xl"
+              >
+                Book Appointment
+              </motion.button>
+            </motion.div>
+            {/* Optional right side (empty or image) */}
+            <motion.div className="w-full md:w-1/2" />
+          </motion.div>
+        </motion.div>
+
+        {/* Services Section (bottom) */}
+        <motion.div
           style={{
             background:
-              "linear-gradient(to bottom, transparent 50%, #004a7f 50%)",
-            minHeight: "43%",
+              "linear-gradient(to bottom, transparent 40%, #004a7f 40%)",
           }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
         >
-          <div className="relative z-20 w-full py-8 px-4 md:px-10 lg:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px] mx-auto">
-            <div className="mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-8 2xl:gap-12">
+          <motion.div
+            className="relative z-20 w-full py-8 px-4 md:px-10 lg:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px] mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+          >
+            <motion.div className="mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-8 2xl:gap-12">
               {/* Card 1 */}
-              <div className="flex flex-col items-center text-center p-6 xl:p-8 shadow-md rounded-md bg-white">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 1 }}
+              >
                 <img
                   src="/family-medicine-3.png"
                   alt="Primary Care Icon"
@@ -116,10 +158,16 @@ export default function Home() {
                 <p className="text-sm xl:text-lg text-gray-600">
                   Comprehensive healthcare for patients of all ages.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Card 2 */}
-              <div className="flex flex-col items-center text-center p-6 xl:p-8 shadow-md rounded-md bg-white">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 1.2 }}
+              >
                 <img
                   src="/walk-in-logo-3.png"
                   alt="Walk-In Clinic Icon"
@@ -131,10 +179,16 @@ export default function Home() {
                 <p className="text-sm xl:text-lg text-gray-600">
                   Immediate care for non-emergency medical needs.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Card 3 */}
-              <div className="flex flex-col items-center text-center p-6 xl:p-8 shadow-md rounded-md bg-white">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 1.4 }}
+              >
                 <img
                   src="/lab-logo.png"
                   alt="On-Site Lab Icon"
@@ -146,10 +200,16 @@ export default function Home() {
                 <p className="text-sm xl:text-lg text-gray-600">
                   Convenient diagnostic services available on-site.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Card 4 */}
-              <div className="flex flex-col items-center text-center p-6 xl:p-8 shadow-md rounded-md bg-white">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 1.6 }}
+              >
                 <img
                   src="/pharmacy-logo.png"
                   alt="Pharmacy Icon"
@@ -161,11 +221,13 @@ export default function Home() {
                 <p className="text-sm xl:text-lg text-gray-600">
                   Full-service pharmacy for your prescriptions.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+
+      <div>asdasd</div>
     </div>
   );
 }
