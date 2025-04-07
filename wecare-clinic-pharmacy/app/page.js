@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <div>
       {/* <div className="relative w-full min-h-screen bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat"> */}
-      <div className="relative w-full h-screen min-h-[900px] bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat">
+      <div className="relative w-full h-screen min-h-[700px] bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat">
         {/* Navbar */}
         <motion.nav
           ref={navbarRef}
