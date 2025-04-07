@@ -173,7 +173,7 @@ export default function Home() {
                 <div className="absolute pt-8 md:flex items-center gap-8 text-[#004a7f]">
                   {/* Phone */}
                   <div className="flex flex-col items-center text-center">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center mb-2 sm:mb-0 gap-2">
                       <FontAwesomeIcon
                         icon={faPhone}
                         className="text-[#004a7f] w-4 h-4"
