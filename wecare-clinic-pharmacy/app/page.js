@@ -58,14 +58,14 @@ export default function Home() {
   return (
     <div>
       {/* <div className="relative w-full min-h-screen bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat"> */}
-      <div className="relative w-full min-h-screen  bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat">
+      <div className="relative w-full h-screen min-h-[900px] bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat">
         {/* Navbar */}
         <motion.nav
           ref={navbarRef}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative top-0 left-0 w-full flex items-center justify-between px-22 md:px-24 py-6 md:pb-6 md:pt-10 z-10"
+          className="relative top-0 left-0 w-full flex items-center justify-between px-18 md:px-24 py-6 md:pb-6 md:pt-10 z-10"
         >
           {/* Logo & Title */}
           <div className="flex items-center gap-2">
@@ -170,7 +170,7 @@ export default function Home() {
                 </div>
 
                 {/* Center Section: Phone & Fax using Font Awesome */}
-                <div className="hidden absolute pt-8 md:flex items-center gap-8 text-[#004a7f]">
+                <div className="absolute pt-8 md:flex items-center gap-8 text-[#004a7f]">
                   {/* Phone */}
                   <div className="flex flex-col items-center text-center">
                     <div className="flex items-center gap-2">
