@@ -65,7 +65,7 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative top-0 left-0 w-full flex items-center justify-between px-6 md:px-24 py-6 md:pb-6 md:pt-10 z-10"
+          className="relative top-0 left-0 w-full flex items-center justify-between px-22 md:px-24 py-6 md:pb-6 md:pt-10 z-10"
         >
           {/* Logo & Title */}
           <div className="flex items-center gap-2">
