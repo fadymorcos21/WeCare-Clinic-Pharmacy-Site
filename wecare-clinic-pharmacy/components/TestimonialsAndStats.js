@@ -5,22 +5,22 @@ import { Star, Users, CalendarCheck, MessageSquare } from "lucide-react";
 export default function TestimonialsAndStats() {
   const testimonials = [
     {
-      name: "Yulian Yurik",
+      name: "Monica McIlroy",
       testimonial:
-        "It's the best walk-in clinic that I saw before. There is a high level organization. The doctors and staff is very helpful, and all personnel are very nice people.",
-      image: "/Yulian.png",
+        "Dr. Samir Mansour is a great listener, has an incredible bedside manner and takes his patients seriously. I would really recommend him and there are never long waits to see him. His office is very accommodating.",
+      image: "/Monica.png",
     },
     {
-      name: "John K.",
+      name: "Nicholas Kusmich",
       testimonial:
-        "Quick walk-in clinic service, saw the doctor right away. Amazing experience overall. Everyone was caring and professional, and they resolved my issue promptly. Definitely the best clinic I've visited.",
-      image: "/john.png",
+        "Best walk in I've ever experienced. For context I was having some medical issues and went to another walk in clinic. That doc told me I'm fine and there was nothing for me to do but wait. I wanted a second opinion so went to WeCare. Within 5 min doc had a requisition to get blood work and an ultrasound to get to the bottom of things. That's the level of care you get here. Just go. They are top notch.",
+      image: "/Nicholas.png",
     },
     {
-      name: "Emily R.",
+      name: "Manasi Shukla",
       testimonial:
-        "Outstanding family practice! The doctors truly care and take time to listen. I've been visiting for years, and each visit reassures me of their commitment to patient care. Absolutely exceptional service every time.",
-      image: "/emily.png",
+        "Very accommodative, experienced doctors.. Dr.Mansoor is great. Have has excellent experience with other walk in docs as well. Manal at reception is smart at managing and knowledgeable. The latest pharmacist that they have ( old lady with curly hair) is superb- takes good time to explain before delivering medications.",
+      image: "/Manasi.png",
     },
   ];
 
@@ -48,7 +48,7 @@ export default function TestimonialsAndStats() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="pt-20 pb-2 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-[#05294a] mb-14">
           Hear From Our Patients

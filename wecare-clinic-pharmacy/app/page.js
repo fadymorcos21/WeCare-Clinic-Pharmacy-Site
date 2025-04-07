@@ -9,7 +9,33 @@ import PharmacySplitSection from "@/components/PharmacySplitSection";
 import PharmacyFreestyleSection from "@/components/PharmacyFreestyleSection";
 import OurDoctors from "@/components/OurDoctors";
 import TestimonialsAndStats from "@/components/TestimonialsAndStats";
+import { Star, Users, CalendarCheck, MessageSquare } from "lucide-react";
+const stats = [
+  {
+    icon: CalendarCheck,
+    number: "17+",
+    label: "Years in Practice",
+  },
+  {
+    icon: Users,
+    number: "10k+",
+    label: "Happy Patients",
+  },
+  {
+    icon: Star,
+    number: "5",
+    label: "Google Star Rating",
+  },
+  {
+    icon: MessageSquare,
+    number: "200+",
+    label: "Positive Reviews",
+  },
+];
 
+// TODO make reviews DP and content wrap properly
+// TODO Make split sections wrap properly
+// TODO add humburger menu toggle
 export default function Home() {
   const navbarRef = useRef(null);
   const [navbarHeight, setNavbarHeight] = useState(0);
@@ -76,7 +102,7 @@ export default function Home() {
 
           {/* Contact Us Button */}
           <div className="flex items-center gap-8">
-            <span className="text-[#004a7f] font-normal">
+            <span className="text-[#004a7f] hidden sm:block font-normal">
               Call to book your appointment now!
             </span>
             <motion.button
@@ -173,7 +199,7 @@ export default function Home() {
               </motion.div>
 
               {/* Optional right side (empty or image) */}
-              <motion.div className="w-full md:w-1/2" />
+              <motion.div className="w-full hidden sm:block md:w-1/2" />
             </motion.div>
           </motion.div>
 
@@ -204,12 +230,12 @@ export default function Home() {
                   <img
                     src="/family-medicine-3.png"
                     alt="Primary Care Icon"
-                    className="w-17 h-17 mb-4"
+                    className="w-12 h-11 sm:w-17 sm:h-17 mb-4"
                   />
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Family Medicine
                   </h3>
-                  <p className="text-sm xl:text-lg text-gray-600">
+                  <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
                     Comprehensive healthcare for patients of all ages.
                   </p>
                 </motion.div>
@@ -224,12 +250,12 @@ export default function Home() {
                   <img
                     src="/walk-in-logo-3.png"
                     alt="Walk-In Clinic Icon"
-                    className="w-17 h-17 mb-3"
+                    className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
                   />
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Walk-In Clinic
                   </h3>
-                  <p className="text-sm xl:text-lg text-gray-600">
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
                     Immediate care for non-emergency medical needs.
                   </p>
                 </motion.div>
@@ -244,12 +270,12 @@ export default function Home() {
                   <img
                     src="/lab-logo.png"
                     alt="On-Site Lab Icon"
-                    className="w-11 h-17 mb-3"
+                    className="w-8 h-12 sm:w-11 sm:h-17 mb-3"
                   />
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     On-Site Lab
                   </h3>
-                  <p className="text-sm xl:text-lg text-gray-600">
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
                     Convenient diagnostic services available on-site.
                   </p>
                 </motion.div>
@@ -264,12 +290,12 @@ export default function Home() {
                   <img
                     src="/pharmacy-logo.png"
                     alt="Pharmacy Icon"
-                    className="w-17 h-17 mb-3"
+                    className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
                   />
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Pharmacy
                   </h3>
-                  <p className="text-sm xl:text-lg text-gray-600">
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
                     Full-service pharmacy for your prescriptions.
                   </p>
                 </motion.div>
