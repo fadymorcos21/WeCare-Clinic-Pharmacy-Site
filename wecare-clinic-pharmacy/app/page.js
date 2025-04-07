@@ -7,6 +7,8 @@ import OverviewSection from "@/components/OverviewSection";
 import CallOrNewPatientSection from "@/components/CallOrNewPatientSection";
 import PharmacySplitSection from "@/components/PharmacySplitSection";
 import PharmacyFreestyleSection from "@/components/PharmacyFreestyleSection";
+import OurDoctors from "@/components/OurDoctors";
+import TestimonialsAndStats from "@/components/TestimonialsAndStats";
 
 export default function Home() {
   const navbarRef = useRef(null);
@@ -280,6 +282,8 @@ export default function Home() {
       <OverviewSection />
       <PharmacyFreestyleSection />
       <PharmacySplitSection />
+      <OurDoctors />
+      <TestimonialsAndStats />
     </div>
   );
 }
