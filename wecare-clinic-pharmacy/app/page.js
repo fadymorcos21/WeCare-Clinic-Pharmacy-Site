@@ -3,6 +3,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faFax } from "@fortawesome/free-solid-svg-icons";
+import OverviewSection from "@/components/OverviewSection";
+import CallOrNewPatientSection from "@/components/CallOrNewPatientSection";
+import PharmacySplitSection from "@/components/PharmacySplitSection";
+import PharmacyFreestyleSection from "@/components/PharmacyFreestyleSection";
 
 export default function Home() {
   const navbarRef = useRef(null);
@@ -272,7 +276,10 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </div>
-      <div className="pts-50">First Section</div>
+      <CallOrNewPatientSection />
+      <OverviewSection />
+      <PharmacyFreestyleSection />
+      <PharmacySplitSection />
     </div>
   );
 }
