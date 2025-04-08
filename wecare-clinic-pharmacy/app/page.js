@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <div>
       {/* <div className="relative w-full min-h-screen bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat"> */}
-      <div className="relative w-full h-screen min-h-[900px] bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat">
+      <div className="relative w-full h-screen min-h-[900px] bg-[url('/landing-page-mobile.png')] sm:bg-[url('/landing-page-upscale-stethoscope.jpg')] bg-center bg-cover bg-no-repeat">
         {/* Navbar */}
         <motion.nav
           ref={navbarRef}
@@ -125,6 +125,7 @@ export default function Home() {
         >
           {/* Header Section (top) */}
           <motion.div
+            className="flex flex-col sm:block"
             style={{
               height: "62%",
               minHeight: "31em",
@@ -134,7 +135,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.4 }}
           >
             <motion.div
-              className="flex h-full items-center mx-auto py-20 px-6 md:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px]"
+              className=" block sm:flex flex-start h-full items-center mx-auto py-20 px-6 md:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -170,7 +171,7 @@ export default function Home() {
                 </div>
 
                 {/* Center Section: Phone & Fax using Font Awesome */}
-                <div className="absolute pt-8 md:flex items-center gap-8 text-[#004a7f]">
+                <div className="absolute hidden pt-8 sm:flex items-center gap-8 text-[#004a7f]">
                   {/* Phone */}
                   <div className="flex flex-col items-center text-center">
                     <div className="flex items-center mb-2 sm:mb-0 gap-2">
@@ -213,6 +214,29 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
           >
+            {/* Center Section: Phone & Fax using Font Awesome */}
+            <div className="absolute  flex sm:hidden items-center gap-8 text-[#004a7f]">
+              {/* Phone */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center mb-2 sm:mb-0 gap-2">
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    className="text-[#004a7f] w-4 h-4"
+                  />
+                  <span className="text-sm font-semi-bold">(905) 749-9990</span>
+                </div>
+              </div>
+              {/* Fax */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center gap-2">
+                  <FontAwesomeIcon
+                    icon={faFax}
+                    className="text-[#004a7f] w-4 h-4"
+                  />
+                  <span className="text-sm font-semi-bold">(905) 749-9991</span>
+                </div>
+              </div>
+            </div>
             <motion.div
               className="relative z-20 w-full py-8 px-4 md:px-10 lg:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px] mx-auto"
               initial={{ opacity: 0 }}
