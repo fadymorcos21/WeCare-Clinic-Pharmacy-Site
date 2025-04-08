@@ -128,7 +128,7 @@ export default function Home() {
             className="flex flex-col sm:block"
             style={{
               height: "62%",
-              minHeight: "31em",
+              minHeight: "27em",
             }}
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
