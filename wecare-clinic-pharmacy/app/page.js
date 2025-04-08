@@ -215,7 +215,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.8 }}
           >
             {/* Center Section: Phone & Fax using Font Awesome */}
-            <div className="absolute  flex sm:hidden items-center gap-8 text-[#004a7f]">
+            <div className="absolute left-20 flex sm:hidden items-center gap-8 text-[#004a7f]">
               {/* Phone */}
               <div className="flex flex-col items-center text-center">
                 <div className="flex items-center mb-2 sm:mb-0 gap-2">
@@ -223,7 +223,7 @@ export default function Home() {
                     icon={faPhone}
                     className="text-[#004a7f] w-4 h-4"
                   />
-                  <span className="text-sm font-semi-bold">(905) 749-9990</span>
+                  <span className="text-lg font-semi-bold">(905) 749-9990</span>
                 </div>
               </div>
               {/* Fax */}
@@ -233,7 +233,7 @@ export default function Home() {
                     icon={faFax}
                     className="text-[#004a7f] w-4 h-4"
                   />
-                  <span className="text-sm font-semi-bold">(905) 749-9991</span>
+                  <span className="text-lg font-semi-bold">(905) 749-9991</span>
                 </div>
               </div>
             </div>
