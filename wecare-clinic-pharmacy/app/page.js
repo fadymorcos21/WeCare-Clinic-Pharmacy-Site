@@ -236,7 +236,7 @@ export default function Home() {
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Family Medicine
                   </h3>
-                  <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
+                  <p className="text-sm hiddsen sm:block xl:text-lg text-gray-600">
                     Comprehensive healthcare for patients of all ages.
                   </p>
                 </motion.div>
@@ -256,7 +256,7 @@ export default function Home() {
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Walk-In Clinic
                   </h3>
-                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
+                  <p className="text-sm xl:text-lg hiddesn sm:block text-gray-600">
                     Immediate care for non-emergency medical needs.
                   </p>
                 </motion.div>
@@ -276,7 +276,7 @@ export default function Home() {
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     On-Site Lab
                   </h3>
-                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
+                  <p className="text-sm xl:text-lg hiddsen sm:block text-gray-600">
                     Convenient diagnostic services available on-site.
                   </p>
                 </motion.div>
@@ -296,7 +296,7 @@ export default function Home() {
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Pharmacy
                   </h3>
-                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
+                  <p className="text-sm xl:text-lg hidsden sm:block text-gray-600">
                     Full-service pharmacy for your prescriptions.
                   </p>
                 </motion.div>
