@@ -204,7 +204,7 @@ export default function Home() {
 
           {/* Services Section (bottom) */}
           <motion.div
-            className="pb-15  sm:pb-0"
+            className="pb-17  sm:pb-0"
             style={{
               background:
                 "linear-gradient(to bottom, transparent 40%, #004a7f 40%)",
@@ -219,10 +219,21 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.9 }}
             >
-              <motion.div className="mx-auto grid grid-cols-4 sm:grid-cols-4 gap-3 lg:gap-8 2xl:gap-12">
+              <motion.div
+                className="mx-auto grid grid-cols-4 sm:grid-cols-4 
+             gap-0 sm:gap-3 lg:gap-8 2xl:gap-12  <!-- ADDED OR CHANGED -->"
+              >
                 {/* Card 1 */}
                 <motion.div
-                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center text-center 
+               p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl 
+               transition-shadow transition-transform duration-300 hover:scale-105
+
+               rounded-none sm:rounded-xl                   <!-- ADDED OR CHANGED -->
+               first:rounded-l-xl last:rounded-r-xl         <!-- ADDED OR CHANGED -->
+               border-l border-gray-300 first:border-l-0    <!-- ADDED OR CHANGED -->
+               sm:border-none                                <!-- ADDED OR CHANGED -->
+               "
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 1 }}
@@ -242,7 +253,15 @@ export default function Home() {
 
                 {/* Card 2 */}
                 <motion.div
-                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center text-center 
+               p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl 
+               transition-shadow transition-transform duration-300 hover:scale-105
+
+               rounded-none sm:rounded-xl                   <!-- ADDED OR CHANGED -->
+               first:rounded-l-xl last:rounded-r-xl         <!-- ADDED OR CHANGED -->
+               border-l border-gray-300 first:border-l-0    <!-- ADDED OR CHANGED -->
+               sm:border-none                                <!-- ADDED OR CHANGED -->
+               "
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 1.2 }}
@@ -262,7 +281,15 @@ export default function Home() {
 
                 {/* Card 3 */}
                 <motion.div
-                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center text-center 
+               p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl 
+               transition-shadow transition-transform duration-300 hover:scale-105
+
+               rounded-none sm:rounded-xl                   <!-- ADDED OR CHANGED -->
+               first:rounded-l-xl last:rounded-r-xl         <!-- ADDED OR CHANGED -->
+               border-l border-gray-300 first:border-l-0    <!-- ADDED OR CHANGED -->
+               sm:border-none                                <!-- ADDED OR CHANGED -->
+               "
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 1.4 }}
@@ -282,7 +309,15 @@ export default function Home() {
 
                 {/* Card 4 */}
                 <motion.div
-                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center text-center 
+               p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl 
+               transition-shadow transition-transform duration-300 hover:scale-105
+
+               rounded-none sm:rounded-xl                   <!-- ADDED OR CHANGED -->
+               first:rounded-l-xl last:rounded-r-xl         <!-- ADDED OR CHANGED -->
+               border-l border-gray-300 first:border-l-0    <!-- ADDED OR CHANGED -->
+               sm:border-none                                <!-- ADDED OR CHANGED -->
+               "
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 1.6 }}
