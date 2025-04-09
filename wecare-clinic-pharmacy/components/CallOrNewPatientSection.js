@@ -24,8 +24,9 @@ export default function CallOrNewPatientSection() {
           </p>
           <div className="text-lg font-semibold">Phone: +1 (905) 848-4844</div>
           <p>
-            Address: <br />
-            104-105 3885 Duke of York Blvd
+            <span className="text-lg font-semibold">Address: </span>
+            <br />
+            169 Dundas St E, Mississauga, ON L5A 1W4
           </p>
         </div>
 
