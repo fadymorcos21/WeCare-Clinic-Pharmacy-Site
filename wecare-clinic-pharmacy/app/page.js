@@ -36,7 +36,7 @@ const stats = [
 ];
 
 const navItems = [
-  { label: "Walk-In Clinic and Family Practice", url: "/walk-in-clinic" },
+  { label: "Walk-In Clinic", url: "/walk-in-clinic" },
   { label: "Laboratory", url: "/laboratory" },
   { label: "Pharmacy", url: "/pharmacy" },
   { label: "Location", url: "/laboratory" },
@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="relative w-full h-screen min-h-[900px] bg-[url('/landing-page-mobile.png')] sm:bg-[url('/landing-page-upscale-stethoscope.jpg')] bg-center bg-cover bg-no-repeat">
+      <div className="relative w-full h-screen sm:min-h-[900px] bg-[url('/landing-page-mobile.png')] sm:bg-[url('/landing-page-upscale-stethoscope.jpg')] bg-center bg-cover bg-no-repeat">
         {/* Navbar */}
         <motion.nav
           ref={navbarRef}
@@ -129,10 +129,10 @@ export default function Home() {
         >
           {/* Header Section (top) */}
           <motion.div
-            className="flex flex-col sm:block"
+            className="flex flex-col sm:block h-screen sm:min-h-[30em] lg:min-h-[32em] "
             style={{
               height: "62%",
-              minHeight: "31em",
+              // minHeight: "20em",
             }}
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ export default function Home() {
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Family Medicine
                   </h3>
-                  <p className="text-sm hiddsen sm:block xl:text-lg text-gray-600">
+                  <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
                     Comprehensive healthcare for patients of all ages.
                   </p>
                 </motion.div>
@@ -254,7 +254,7 @@ export default function Home() {
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Walk-In Clinic
                   </h3>
-                  <p className="text-sm xl:text-lg hiddesn sm:block text-gray-600">
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
                     Immediate care for non-emergency medical needs.
                   </p>
                 </motion.div>
@@ -274,7 +274,7 @@ export default function Home() {
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     On-Site Lab
                   </h3>
-                  <p className="text-sm xl:text-lg hiddsen sm:block text-gray-600">
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
                     Convenient diagnostic services available on-site.
                   </p>
                 </motion.div>
@@ -294,7 +294,7 @@ export default function Home() {
                   <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
                     Pharmacy
                   </h3>
-                  <p className="text-sm xl:text-lg hidsden sm:block text-gray-600">
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
                     Full-service pharmacy for your prescriptions.
                   </p>
                 </motion.div>

@@ -54,7 +54,9 @@ export default function CallOrNewPatientSection() {
 
         {/* Right Side: New Patient Form */}
         <div className="flex flex-col justify-center space-y-4">
-          <h2 className="text-2xl font-bold">Become a New Family Patient</h2>
+          <h2 className="text-2xl font-bold z-60">
+            Become a New Family Patient
+          </h2>
           <p>
             Looking to join our family practice? Fill out the form below to
             request a consultation, and we’ll get back to you soon.
