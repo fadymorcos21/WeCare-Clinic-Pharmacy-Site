@@ -102,11 +102,11 @@ export default function PharmacyPage() {
                     className="mb-3 h-20 w-auto"
                   />
                   <p className="text-gray-700">
-                    Request your prescription refills with just a few clicks.
-                    Secure &amp; fast processing. User-friendly form.
+                    Request your prescription refills or renewals with just a
+                    few clicks. Secure &amp; fast processing.
                   </p>
-                  <button className="mt-4 text-sm font-semibold  text-blue-600 hover:underline">
-                    Learn More
+                  <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
+                    Sumbit Refill
                   </button>
                 </div>
 
@@ -122,8 +122,8 @@ export default function PharmacyPage() {
                     Moving your prescription from another pharmacy? Effortless
                     process. You’ll never look back.
                   </p>
-                  <button className="mt-4 text-sm font-semibold text-blue-600 hover:underline">
-                    Learn More
+                  <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
+                    Transfer Form
                   </button>
                 </div>
 
@@ -139,13 +139,13 @@ export default function PharmacyPage() {
                     Never miss a dose with our timely refill reminders. Simple
                     signup process. Peace of mind.
                   </p>
-                  <button className="mt-4 text-sm font-semibold text-blue-600 hover:underline">
-                    Learn More
+                  <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
+                    Contact Us
                   </button>
                 </div>
 
                 {/* Blister Packaging Card */}
-                <div className="p-6 bg-gray-50 border rounded-lg shadow hover:shadow-lg transition flex flex-col items-start text-left">
+                <div className="p-6 pb-6 bg-gray-50 border rounded-lg shadow hover:shadow-lg transition flex flex-col items-start text-left">
                   <h3 className="sr-only">Blister Packaging</h3>
                   <img
                     src="/blister-packaging.png"
@@ -156,8 +156,8 @@ export default function PharmacyPage() {
                     Stay organized with our compliance aids. Elite packaging
                     service. Never miss a dose again.
                   </p>
-                  <button className="mt-4 text-sm font-semibold text-blue-600 hover:underline">
-                    Learn More
+                  <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
+                    Contact Us
                   </button>
                 </div>
               </div>
