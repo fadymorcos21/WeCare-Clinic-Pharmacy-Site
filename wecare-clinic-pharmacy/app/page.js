@@ -1,15 +1,17 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link"; // import Next.js Link for client-side navigation
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faFax } from "@fortawesome/free-solid-svg-icons";
-import OverviewSection from "@/components/OverviewSection";
+import OverviewSection from "@/components/home/OverviewSection";
 import CallOrNewPatientSection from "@/components/CallOrNewPatientSection";
 import PharmacySplitSection from "@/components/PharmacySplitSection";
-import PharmacyFreestyleSection from "@/components/PharmacyFreestyleSection";
+import PharmacyFreestyleSection from "@/components/home/PharmacyFreestyleSection";
 import OurDoctors from "@/components/OurDoctors";
-import TestimonialsAndStats from "@/components/TestimonialsAndStats";
+import TestimonialsAndStats from "@/components/home/TestimonialsAndStats";
 import { Star, Users, CalendarCheck, MessageSquare } from "lucide-react";
+
 const stats = [
   {
     icon: CalendarCheck,
@@ -33,9 +35,13 @@ const stats = [
   },
 ];
 
-// TODO make reviews DP and content wrap properly
-// TODO Make split sections wrap properly
-// TODO add humburger menu toggle
+const navItems = [
+  { label: "Walk-In Clinic and Family Practice", url: "/walk-in-clinic" },
+  { label: "Laboratory", url: "/laboratory" },
+  { label: "Pharmacy", url: "/pharmacy" },
+  { label: "Location", url: "/laboratory" },
+];
+
 export default function Home() {
   const navbarRef = useRef(null);
   const [navbarHeight, setNavbarHeight] = useState(0);
@@ -57,7 +63,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* <div className="relative w-full min-h-screen bg-[url('/landing-page-upscale.jpeg')] bg-center bg-cover bg-no-repeat"> */}
       <div className="relative w-full h-screen min-h-[900px] bg-[url('/landing-page-mobile.png')] sm:bg-[url('/landing-page-upscale-stethoscope.jpg')] bg-center bg-cover bg-no-repeat">
         {/* Navbar */}
         <motion.nav
@@ -65,7 +70,7 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative top-0 left-0 w-full flex items-center justify-between px-18 md:px-24 py-6 md:pb-6 md:pt-10 z-10"
+          className="relative top-0 left-0 w-full flex items-center justify-between pl-18 pr-5 md:pl-24 md:pr-12 py-6 md:pb-6 md:pt-10 z-10"
         >
           {/* Logo & Title */}
           <div className="flex items-center gap-2">
@@ -86,17 +91,16 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="hidden px-10 md:flex ml-12 gap-8 text-[#05294a]"
             >
-              {["Walk-In Clinic", "Family Practice", "Pharmacy", "About"].map(
-                (item, i) => (
+              {navItems.map((item, i) => (
+                <Link key={i} href={item.url}>
                   <motion.li
-                    key={i}
                     className="cursor-pointer hover:opacity-80 font-semibold"
                     whileHover={{ scale: 1.05 }}
                   >
-                    {item}
+                    {item.label}
                   </motion.li>
-                )
-              )}
+                </Link>
+              ))}
             </motion.ul>
           </div>
 
@@ -156,16 +160,10 @@ export default function Home() {
                 </h1>
                 {/* Buttons Container */}
                 <div className="flex flex-wrap gap-4">
-                  <motion.button
-                    // Removed hover scale effect; using color transition instead
-                    className="bg-[#004a7f] text-white px-6 py-3 rounded-lg hover:bg-[#60b9f7] transition-colors duration-300 text-md 2xl:text-xl"
-                  >
+                  <motion.button className="bg-[#004a7f] text-white px-6 py-3 rounded-lg hover:bg-[#60b9f7] transition-colors duration-300 text-md 2xl:text-xl">
                     Transfer Rx
                   </motion.button>
-                  <motion.button
-                    // Transparent background with outline and hover fill
-                    className="bg-transparent text-[#004a7f] border border-[#004a7f] hover:border-[#60b9f7]  px-6 py-3 rounded-lg hover:bg-[#60b9f7] hover:text-white transition-colors duration-300 text-md 2xl:text-xl"
-                  >
+                  <motion.button className="bg-transparent text-[#004a7f] border border-[#004a7f] hover:border-[#60b9f7]  px-6 py-3 rounded-lg hover:bg-[#60b9f7] hover:text-white transition-colors duration-300 text-md 2xl:text-xl">
                     Learn More
                   </motion.button>
                 </div>

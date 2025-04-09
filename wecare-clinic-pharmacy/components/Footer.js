@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <>
       {/* STATS SECTION */}
-      <div className="py-10 w-full h-67 sm:h-43 z-50 bg-gray-50">
+      <div className="py-10 w-full h-67 sm:h-43 z-50 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="sm:max-w-7xl mx-auto z-50 px-4 sm:px-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 rounded-xl overflow-hidden">
             {stats.map((stat, i) => (
