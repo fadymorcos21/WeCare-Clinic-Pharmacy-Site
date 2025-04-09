@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link"; // import Next.js Link for client-side navigation
+import Link from "next/link"; // still used for nav items if needed
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faFax } from "@fortawesome/free-solid-svg-icons";
@@ -45,6 +46,7 @@ const navItems = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   const navbarRef = useRef(null);
   const [navbarHeight, setNavbarHeight] = useState(0);
 
@@ -131,7 +133,7 @@ export default function Home() {
         >
           {/* Header Section (top) */}
           <motion.div
-            className="flex flex-col sm:block h-screen sm:min-h-[30em] lg:min-h-[32em] "
+            className="flex flex-col sm:block h-screen sm:min-h-[30em] lg:min-h-[32em]"
             style={{
               height: "62%",
             }}
@@ -140,7 +142,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.4 }}
           >
             <motion.div
-              className=" block sm:flex flex-start h-full items-center mx-auto py-3 sm:py-20 px-6 md:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px]"
+              className="block sm:flex flex-start h-full items-center mx-auto py-3 sm:py-20 px-6 md:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -156,7 +158,7 @@ export default function Home() {
                 </h6>
                 <h1 className="leading-tight font-bold mb-6 text-[#0a192a] text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl">
                   Family Practice
-                  <br className=" md:block" />
+                  <br className="md:block" />
                   Walk-In Clinic & Pharmacy
                 </h1>
                 {/* Buttons Container */}
@@ -164,7 +166,7 @@ export default function Home() {
                   <motion.button className="bg-[#004a7f] text-white px-6 py-3 rounded-lg hover:bg-[#60b9f7] transition-colors duration-300 text-md 2xl:text-xl">
                     Transfer Rx
                   </motion.button>
-                  <motion.button className="bg-transparent text-[#004a7f] border border-[#004a7f] hover:border-[#60b9f7]  px-6 py-3 rounded-lg hover:bg-[#60b9f7] hover:text-white transition-colors duration-300 text-md 2xl:text-xl">
+                  <motion.button className="bg-transparent text-[#004a7f] border border-[#004a7f] hover:border-[#60b9f7] px-6 py-3 rounded-lg hover:bg-[#60b9f7] hover:text-white transition-colors duration-300 text-md 2xl:text-xl">
                     Learn More
                   </motion.button>
                 </div>
@@ -205,7 +207,7 @@ export default function Home() {
 
           {/* Services Section (bottom) */}
           <motion.div
-            className="pb-19  sm:pb-0"
+            className="pb-19 sm:pb-0"
             style={{
               background:
                 "linear-gradient(to bottom, transparent 40%, #004a7f 40%)",
@@ -222,97 +224,94 @@ export default function Home() {
             >
               <motion.div className="mx-auto grid grid-cols-4 sm:grid-cols-4 gap-0 sm:gap-3 lg:gap-8 2xl:gap-12">
                 {/* Card 1: Family Medicine */}
-                <Link href="/family-medicine" passHref>
-                  <motion.div
-                    className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 sm:border-none"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.7, delay: 1 }}
-                  >
-                    <img
-                      src="/family-medicine-3.png"
-                      alt="Primary Care Icon"
-                      className="w-12 h-11 sm:w-17 sm:h-17 mb-4"
-                    />
-                    <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
-                      Family Medicine
-                    </h3>
-                    <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
-                      Comprehensive healthcare for patients of all ages.
-                    </p>
-                  </motion.div>
-                </Link>
+                <motion.div
+                  onClick={() => router.push("/walk-in-clinic")}
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.7, delay: 1 }}
+                >
+                  <img
+                    src="/family-medicine-3.png"
+                    alt="Primary Care Icon"
+                    className="w-12 h-11 sm:w-17 sm:h-17 mb-4"
+                  />
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
+                    Family Medicine
+                  </h3>
+                  <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
+                    Comprehensive healthcare for patients of all ages.
+                  </p>
+                </motion.div>
 
                 {/* Card 2: Walk-In Clinic */}
-                <Link href="/walk-in-clinic" passHref>
-                  <motion.div
-                    className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 sm:border-none"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.7, delay: 1.2 }}
-                  >
-                    <img
-                      src="/walk-in-logo-3.png"
-                      alt="Walk-In Clinic Icon"
-                      className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
-                    />
-                    <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
-                      Walk-In Clinic
-                    </h3>
-                    <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
-                      Immediate care for non-emergency medical needs.
-                    </p>
-                  </motion.div>
-                </Link>
+                <motion.div
+                  onClick={() => router.push("/walk-in-clinic")}
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.7, delay: 1.2 }}
+                >
+                  <img
+                    src="/walk-in-logo-3.png"
+                    alt="Walk-In Clinic Icon"
+                    className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
+                  />
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
+                    Walk-In Clinic
+                  </h3>
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
+                    Immediate care for non-emergency medical needs.
+                  </p>
+                </motion.div>
 
                 {/* Card 3: On-Site Lab */}
-                <Link href="/laboratory" passHref>
-                  <motion.div
-                    className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 sm:border-none"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.7, delay: 1.4 }}
-                  >
-                    <img
-                      src="/lab-logo.png"
-                      alt="On-Site Lab Icon"
-                      className="w-8 h-12 sm:w-11 sm:h-17 mb-3"
-                    />
-                    <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
-                      On-Site Lab
-                    </h3>
-                    <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
-                      Convenient diagnostic services available on-site.
-                    </p>
-                  </motion.div>
-                </Link>
+                <motion.div
+                  onClick={() => router.push("/laboratory")}
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.7, delay: 1.4 }}
+                >
+                  <img
+                    src="/lab-logo.png"
+                    alt="On-Site Lab Icon"
+                    className="w-8 h-12 sm:w-11 sm:h-17 mb-3"
+                  />
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
+                    On-Site Lab
+                  </h3>
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
+                    Convenient diagnostic services available on-site.
+                  </p>
+                </motion.div>
 
                 {/* Card 4: Pharmacy */}
-                <Link href="/pharmacy" passHref>
-                  <motion.div
-                    className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 sm:border-none"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.7, delay: 1.6 }}
-                  >
-                    <img
-                      src="/pharmacy-logo.png"
-                      alt="Pharmacy Icon"
-                      className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
-                    />
-                    <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
-                      Pharmacy
-                    </h3>
-                    <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
-                      Full-service pharmacy for your prescriptions.
-                    </p>
-                  </motion.div>
-                </Link>
+                <motion.div
+                  onClick={() => router.push("/pharmacy")}
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.7, delay: 1.6 }}
+                >
+                  <img
+                    src="/pharmacy-logo.png"
+                    alt="Pharmacy Icon"
+                    className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
+                  />
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
+                    Pharmacy
+                  </h3>
+                  <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
+                    Full-service pharmacy for your prescriptions.
+                  </p>
+                </motion.div>
               </motion.div>
             </motion.div>
           </motion.div>
         </motion.div>
       </div>
+
       <CallOrNewPatientSection />
       <OverviewSection />
       <PharmacyFreestyleSection />
