@@ -204,7 +204,7 @@ export default function Home() {
 
           {/* Services Section (bottom) */}
           <motion.div
-            className="pb-17  sm:pb-0"
+            className="pb-19  sm:pb-0"
             style={{
               background:
                 "linear-gradient(to bottom, transparent 40%, #004a7f 40%)",
