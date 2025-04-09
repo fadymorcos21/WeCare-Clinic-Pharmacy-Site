@@ -25,13 +25,13 @@ export default function PharmacySplitSection() {
           {/* Links/Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="#"
+              href="/pharmacy/transfer-rx"
               className="inline-block bg-red-600 hover:bg-red-700 px-4 py-2 rounded font-semibold text-white text-center"
             >
               Transfer Rx
             </a>
             <a
-              href="#"
+              href="/pharmacy/online-refill"
               className="inline-block border border-red-600 hover:bg-red-700 hover:text-white px-4 py-2 rounded font-semibold text-red-600 text-center"
             >
               Online Refill

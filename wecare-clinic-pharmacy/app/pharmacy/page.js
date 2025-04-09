@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import InfoSection from "@/components/InfoSection";
@@ -93,8 +94,7 @@ export default function PharmacyPage() {
               {/* Right Column: Four Service Cards (2x2) */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Online Refill Card */}
-                <div className="p-6 bg-gray-50 border rounded-lg shadow  hover:shadow-lg transition flex flex-col items-start text-left">
-                  {/* Hidden heading for accessibility */}
+                <div className="p-6 bg-gray-50 border rounded-lg shadow hover:shadow-lg transition flex flex-col items-start text-left">
                   <h3 className="sr-only">Online Refill</h3>
                   <img
                     src="/online-refill.png"
@@ -105,9 +105,11 @@ export default function PharmacyPage() {
                     Request your prescription refills or renewals with just a
                     few clicks. Secure &amp; fast processing.
                   </p>
-                  <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
-                    Sumbit Refill
-                  </button>
+                  <Link href="/pharmacy/online-refill">
+                    <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
+                      Submit Refill
+                    </button>
+                  </Link>
                 </div>
 
                 {/* Transfer Prescriptions Card */}
@@ -122,9 +124,11 @@ export default function PharmacyPage() {
                     Moving your prescription from another pharmacy? Effortless
                     process. You’ll never look back.
                   </p>
-                  <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
-                    Transfer Form
-                  </button>
+                  <Link href="/pharmacy/transfer-rx">
+                    <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
+                      Transfer Form
+                    </button>
+                  </Link>
                 </div>
 
                 {/* Refill Reminders Card */}
@@ -139,9 +143,11 @@ export default function PharmacyPage() {
                     Never miss a dose with our timely refill reminders. Simple
                     signup process. Peace of mind.
                   </p>
-                  <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
-                    Contact Us
-                  </button>
+                  <Link href="/contact-us">
+                    <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
+                      Contact Us
+                    </button>
+                  </Link>
                 </div>
 
                 {/* Blister Packaging Card */}
@@ -156,9 +162,11 @@ export default function PharmacyPage() {
                     Stay organized with our compliance aids. Elite packaging
                     service. Never miss a dose again.
                   </p>
-                  <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
-                    Contact Us
-                  </button>
+                  <Link href="/contact-us">
+                    <button className="mt-4 border p-2 rounded-lg self-end text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white">
+                      Contact Us
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -83,7 +83,7 @@ export default function InfoSection() {
                   Come in now and get a free minor ailment assessment!
                 </p>
 
-                <Link href="/learn-more">
+                <Link href="/pharmacy/book-consultation">
                   <button className="inline-block bg-[#155dfc] text-white font-bold py-3 px-6 rounded-full shadow border border-[#155dfc] hover:border hover:bg-[white]  hover:text-[#155dfc] transition">
                     Schedule A Free Minor Ailment Assement
                   </button>

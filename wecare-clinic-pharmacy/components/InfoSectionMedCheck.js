@@ -46,7 +46,10 @@ export default function InfoSectionMedCheck() {
                   </span>
                 </li>
               </ul>
-              <a className="mt-8 inline-block bg-[#155dfc] text-white font-bold py-3 px-6 rounded-full shadow border border-[#155dfc] hover:border hover:text-[#155dfc] hover:bg-[white] transition">
+              <a
+                href="/pharmacy/book-consultation"
+                className="mt-8 inline-block bg-[#155dfc] text-white font-bold py-3 px-6 rounded-full shadow border border-[#155dfc] hover:border hover:text-[#155dfc] hover:bg-[white] transition"
+              >
                 Book Your Free Review
               </a>
             </div>

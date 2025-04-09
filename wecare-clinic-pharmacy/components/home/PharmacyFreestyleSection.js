@@ -1,7 +1,11 @@
 "use client";
+import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function WeCarePharmacyLayout() {
+  const router = useRouter();
+
   return (
     <div className="bg-gray-50">
       {/* SECTION 1: "We Care Pharmacy" (2/3 text, 1/3 image) */}
@@ -71,7 +75,10 @@ export default function WeCarePharmacyLayout() {
               <li>Secure & fast processing</li>
               <li>User-friendly form</li>
             </ul>
-            <button className="mt-auto bg-[#f49988] hover:bg-[#d17564] text-white font-semibold py-2 px-4 rounded">
+            <button
+              onClick={() => router.push("/pharmacy/online-refill")}
+              className="mt-auto bg-[#f49988] hover:bg-[#d17564] text-white font-semibold py-2 px-4 rounded"
+            >
               Refill Now
             </button>
           </div>
@@ -88,7 +95,10 @@ export default function WeCarePharmacyLayout() {
               <li>Effortless process</li>
               <li>You'll never look back</li>
             </ul>
-            <button className="mt-auto bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-4 rounded">
+            <button
+              onClick={() => router.push("/pharmacy/transfer-rx")}
+              className="mt-auto bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-4 rounded"
+            >
               Transfer Now
             </button>
           </div>
@@ -105,12 +115,15 @@ export default function WeCarePharmacyLayout() {
               <li>Simple signup process</li>
               <li>Peace of mind</li>
             </ul>
-            <button className="mt-auto bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-4 rounded">
-              Sign Up
+            <button
+              onClick={() => router.push("/contact-us")}
+              className="mt-auto bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-4 rounded"
+            >
+              Contact Us
             </button>
           </div>
 
-          {/* Online Renewals */}
+          {/* Blister Packaging */}
           <div className="bg-white rounded shadow p-6 flex flex-col">
             <h3 className="text-xl font-semibold text-[#05294a] mb-3">
               Blister Packaging
@@ -122,7 +135,10 @@ export default function WeCarePharmacyLayout() {
               <li>Elite packaging service</li>
               <li>Never miss a dose again</li>
             </ul>
-            <button className="mt-auto bg-[#f49988] hover:bg-[#d17564] text-white font-semibold py-2 px-4 rounded">
+            <button
+              onClick={() => router.push("/contact-us")}
+              className="mt-auto bg-[#f49988] hover:bg-[#d17564] text-white font-semibold py-2 px-4 rounded"
+            >
               Contact Us
             </button>
           </div>
