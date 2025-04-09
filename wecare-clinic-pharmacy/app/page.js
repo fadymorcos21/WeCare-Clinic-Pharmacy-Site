@@ -218,7 +218,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.9 }}
             >
-              <motion.div className="mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-8 2xl:gap-12">
+              <motion.div className="mx-auto grid grid-cols-4 sm:grid-cols-4 gap-3 lg:gap-8 2xl:gap-12">
                 {/* Card 1 */}
                 <motion.div
                   className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
