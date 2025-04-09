@@ -114,6 +114,7 @@ export default function Home() {
               Call to book your appointment now!
             </span>
             <motion.button
+              onClick={() => router.push("/contact-us")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#004a7f] text-white px-4 py-2 rounded-md hover:bg-[#00375e]"
@@ -163,11 +164,18 @@ export default function Home() {
                 </h1>
                 {/* Buttons Container */}
                 <div className="flex flex-wrap gap-4">
-                  <motion.button className="bg-[#004a7f] text-white px-6 py-3 rounded-lg hover:bg-[#60b9f7] transition-colors duration-300 text-md 2xl:text-xl">
+                  <motion.button
+                    onClick={() => router.push("/pharmacy/transfer-rx")}
+                    className="bg-[#004a7f] text-white px-6 py-3 rounded-lg hover:bg-[#60b9f7] transition-colors duration-300 text-md 2xl:text-xl"
+                  >
                     Transfer Rx
                   </motion.button>
-                  <motion.button className="bg-transparent text-[#004a7f] border border-[#004a7f] hover:border-[#60b9f7] px-6 py-3 rounded-lg hover:bg-[#60b9f7] hover:text-white transition-colors duration-300 text-md 2xl:text-xl">
-                    Learn More
+
+                  <motion.button
+                    onClick={() => router.push("/walk-in-clinic")}
+                    className="bg-transparent text-[#004a7f] border border-[#004a7f] hover:border-[#60b9f7] px-6 py-3 rounded-lg hover:bg-[#60b9f7] hover:text-white transition-colors duration-300 text-md 2xl:text-xl"
+                  >
+                    New Patient
                   </motion.button>
                 </div>
 
