@@ -93,7 +93,7 @@ export default function PharmacyPage() {
               {/* Right Column: Four Service Cards (2x2) */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Online Refill Card */}
-                <div className="p-6 bg-gray-50 border rounded-lg shadow hover:shadow-lg transition flex flex-col items-start text-left">
+                <div className="p-6 bg-gray-50 border rounded-lg shadow  hover:shadow-lg transition flex flex-col items-start text-left">
                   {/* Hidden heading for accessibility */}
                   <h3 className="sr-only">Online Refill</h3>
                   <img
@@ -105,7 +105,7 @@ export default function PharmacyPage() {
                     Request your prescription refills with just a few clicks.
                     Secure &amp; fast processing. User-friendly form.
                   </p>
-                  <button className="mt-4 text-sm font-semibold text-blue-600 hover:underline">
+                  <button className="mt-4 text-sm font-semibold  text-blue-600 hover:underline">
                     Learn More
                   </button>
                 </div>

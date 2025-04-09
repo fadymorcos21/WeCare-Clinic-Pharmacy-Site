@@ -22,7 +22,7 @@ export default function LocationPage() {
       />
 
       {/* Main Content */}
-      <div className="flex mx-auto flex-row grid grid-cols-1 sm:grid-cols-2 max-w-7xl gap-10 py-20">
+      <div className="flex mx-auto flex-row grid grid-cols-1 sm:grid-cols-2 max-w-7xl gap-10 py-15">
         {/* Left Column */}
         <main className="w-full px-4 flex flex-col justify-between py-8 space-y-8 relative">
           {/* Location Card */}
