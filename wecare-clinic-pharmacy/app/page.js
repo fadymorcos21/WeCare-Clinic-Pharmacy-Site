@@ -139,7 +139,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.4 }}
           >
             <motion.div
-              className=" block sm:flex flex-start h-full items-center mx-auto py-10 sm:py-20 px-6 md:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px]"
+              className=" block sm:flex flex-start h-full items-center mx-auto py-3 sm:py-20 px-6 md:px-20 xl:px-20 2xl:px-[45px] max-w-full sm:max-w-7xl 2xl:max-w-[1600px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -221,7 +221,7 @@ export default function Home() {
               <motion.div className="mx-auto grid grid-cols-4 sm:grid-cols-4 gap-3 lg:gap-8 2xl:gap-12">
                 {/* Card 1 */}
                 <motion.div
-                  className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 1 }}
@@ -231,7 +231,7 @@ export default function Home() {
                     alt="Primary Care Icon"
                     className="w-12 h-11 sm:w-17 sm:h-17 mb-4"
                   />
-                  <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
                     Family Medicine
                   </h3>
                   <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
@@ -241,7 +241,7 @@ export default function Home() {
 
                 {/* Card 2 */}
                 <motion.div
-                  className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 1.2 }}
@@ -251,7 +251,7 @@ export default function Home() {
                     alt="Walk-In Clinic Icon"
                     className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
                   />
-                  <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
                     Walk-In Clinic
                   </h3>
                   <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
@@ -261,7 +261,7 @@ export default function Home() {
 
                 {/* Card 3 */}
                 <motion.div
-                  className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 1.4 }}
@@ -271,7 +271,7 @@ export default function Home() {
                     alt="On-Site Lab Icon"
                     className="w-8 h-12 sm:w-11 sm:h-17 mb-3"
                   />
-                  <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
                     On-Site Lab
                   </h3>
                   <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
@@ -281,7 +281,7 @@ export default function Home() {
 
                 {/* Card 4 */}
                 <motion.div
-                  className="flex flex-col items-center text-center p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl rounded-xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.7, delay: 1.6 }}
@@ -291,7 +291,7 @@ export default function Home() {
                     alt="Pharmacy Icon"
                     className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
                   />
-                  <h3 className="font-semibold text-xl 2xl:text-2xl mb-2">
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
                     Pharmacy
                   </h3>
                   <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
