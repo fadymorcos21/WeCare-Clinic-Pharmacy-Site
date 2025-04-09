@@ -11,6 +11,7 @@ import CallOrNewPatientSection from "@/components/CallOrNewPatientSection";
 import WeCareClinicHero from "@/components/WeCareClinicHero";
 import InfoSectionClinic from "@/components/InfoSectionClinic";
 import ServicesSection from "@/components/ServicesSection";
+import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
@@ -168,6 +169,7 @@ export default function Page() {
 
       <OurDoctors />
       <TestimonialsAndStats />
+      <Footer />
     </>
   );
 }

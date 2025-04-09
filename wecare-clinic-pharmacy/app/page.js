@@ -11,6 +11,7 @@ import PharmacyFreestyleSection from "@/components/home/PharmacyFreestyleSection
 import OurDoctors from "@/components/OurDoctors";
 import TestimonialsAndStats from "@/components/home/TestimonialsAndStats";
 import { Star, Users, CalendarCheck, MessageSquare } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const stats = [
   {
@@ -346,6 +347,7 @@ export default function Home() {
       <PharmacySplitSection />
       <OurDoctors />
       <TestimonialsAndStats />
+      <Footer />
     </div>
   );
 }

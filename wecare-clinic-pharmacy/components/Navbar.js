@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Walk-In Clinic", url: "/walk-in-clinic" },
-  { label: "Family Practice", url: "/family-practice" },
+  { label: "Family Practice", url: "/walk-in-clinic" },
   { label: "Laboratory", url: "/laboratory" },
   { label: "Pharmacy", url: "/pharmacy" },
   { label: "Location", url: "/location" },

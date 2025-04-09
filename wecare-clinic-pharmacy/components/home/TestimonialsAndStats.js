@@ -2,7 +2,9 @@
 import React from "react";
 import { Star, Users, CalendarCheck, MessageSquare } from "lucide-react";
 
-export default function TestimonialsAndStats() {
+export default function TestimonialsAndStats({
+  bgClassName = "bg-gradient-to-r from-gray-50 to-blue-50",
+}) {
   const testimonials = [
     {
       name: "Monica McIlroy",
@@ -48,7 +50,7 @@ export default function TestimonialsAndStats() {
   ];
 
   return (
-    <section className="pt-20 pb-2 bg-gradient-to-r from-gray-50 to-blue-50">
+    <section className={`${bgClassName} pt-20 pb-2`}>
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-[#05294a] mb-14">
           Hear From Our Patients
@@ -90,8 +92,9 @@ export default function TestimonialsAndStats() {
           ))}
         </div>
 
-        {/* Stats Section */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-[2px] rounded-xl overflow-hidden">
+        {/* Stats Section (currently commented out) */}
+        {/*
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-[2px] rounded-xl overflow-hidden">
           {stats.map((stat, i) => (
             <div
               key={i}
@@ -104,7 +107,8 @@ export default function TestimonialsAndStats() {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
+        */}
       </div>
     </section>
   );

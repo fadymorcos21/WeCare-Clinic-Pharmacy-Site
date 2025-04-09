@@ -6,6 +6,7 @@ import InfoSection from "@/components/InfoSection";
 import InfoSectionMedCheck from "@/components/InfoSectionMedCheck";
 import PharmacySplitSection from "@/components/PharmacySplitSection";
 import TestimonialsAndStats from "@/components/home/TestimonialsAndStats";
+import Footer from "@/components/Footer";
 
 export default function PharmacyPage() {
   return (
@@ -168,6 +169,7 @@ export default function PharmacyPage() {
         <InfoSectionMedCheck />
         <TestimonialsAndStats />
       </div>
+      <Footer />
     </>
   );
 }

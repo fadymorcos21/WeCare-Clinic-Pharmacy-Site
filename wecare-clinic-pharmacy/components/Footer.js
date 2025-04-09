@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import { Star, Users, CalendarCheck, MessageSquare } from "lucide-react";
 
-export default function Footer() {
+export default function Footer({
+  statsBgClassName = "bg-gradient-to-r from-gray-50 to-blue-50",
+}) {
   // Stats data
   const stats = [
     {
@@ -29,7 +32,7 @@ export default function Footer() {
   return (
     <>
       {/* STATS SECTION */}
-      <div className="py-10 w-full h-67 sm:h-43 z-50 bg-gradient-to-r from-gray-50 to-blue-50">
+      <div className={`py-10 w-full h-67 sm:h-43 z-50 ${statsBgClassName}`}>
         <div className="sm:max-w-7xl mx-auto z-50 px-4 sm:px-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 rounded-xl overflow-hidden">
             {stats.map((stat, i) => (
