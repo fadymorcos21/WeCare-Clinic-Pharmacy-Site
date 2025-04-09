@@ -9,7 +9,7 @@ const navItems = [
   { label: "Family Practice", url: "/family-practice" },
   { label: "Laboratory", url: "/laboratory" },
   { label: "Pharmacy", url: "/pharmacy" },
-  { label: "About", url: "/about" },
+  { label: "Location", url: "/location" },
 ];
 
 export default function Navbar() {
@@ -27,16 +27,18 @@ export default function Navbar() {
       >
         {/* Logo & Title */}
         <div className="flex items-center gap-2">
-          <motion.div
-            className="flex w-10 h-10 items-center justify-center"
-            whileHover={{ scale: 1.1 }}
-          >
-            <img
-              src="/logo-3.png"
-              alt="Clinic Logo"
-              className="absolute object-contain max-w-[155] max-h-[72px]"
-            />
-          </motion.div>
+          <a href="/">
+            <motion.div
+              className="flex w-10 h-10 items-center justify-center"
+              whileHover={{ scale: 1.1 }}
+            >
+              <img
+                src="/logo-3.png"
+                alt="Clinic Logo"
+                className="absolute object-contain max-w-[155] max-h-[72px]"
+              />
+            </motion.div>
+          </a>
           {/* Navigation Links (Desktop) */}
           <motion.ul
             initial={{ opacity: 0, x: -10 }}

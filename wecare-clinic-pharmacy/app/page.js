@@ -37,9 +37,10 @@ const stats = [
 
 const navItems = [
   { label: "Walk-In Clinic", url: "/walk-in-clinic" },
+  { label: "Family Practice", url: "/walk-in-clinic" },
   { label: "Laboratory", url: "/laboratory" },
   { label: "Pharmacy", url: "/pharmacy" },
-  { label: "Location", url: "/laboratory" },
+  { label: "Location", url: "/location" },
 ];
 
 export default function Home() {

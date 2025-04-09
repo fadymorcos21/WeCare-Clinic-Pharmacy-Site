@@ -8,6 +8,9 @@ import PharmacySplitSection from "@/components/PharmacySplitSection";
 import TestimonialsAndStats from "@/components/home/TestimonialsAndStats";
 import OurDoctors from "@/components/OurDoctors";
 import CallOrNewPatientSection from "@/components/CallOrNewPatientSection";
+import WeCareClinicHero from "@/components/WeCareClinicHero";
+import InfoSectionClinic from "@/components/InfoSectionClinic";
+import ServicesSection from "@/components/ServicesSection";
 
 export default function Page() {
   return (
@@ -23,6 +26,7 @@ export default function Page() {
           </a>
         }
       />
+
       <div className="bg-[#004a7f] text-white py-6 px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center text-sm sm:text-base">
           <div>
@@ -41,167 +45,126 @@ export default function Page() {
       </div>
       {/* Embedded form for new or current patients */}
       <CallOrNewPatientSection />
+      <InfoSectionClinic />
+      <ServicesSection />
+      {/* <WeCareClinicHero /> */}
 
       {/* --- Begin Custom Page Content --- */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Our Clinic Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Walk-In Care */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Walk-In Care</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Treatment of common illnesses (flu, colds, infections)</li>
-                <li>Minor injuries (cuts, sprains, burns)</li>
-                <li>Allergy treatments</li>
-                <li>
-                  Vaccinations (flu shots, travel vaccines, immunizations)
-                </li>
-              </ul>
-            </div>
-            {/* Family Medicine */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Family Medicine</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Routine check-ups and annual physicals</li>
-                <li>Pediatric care and well-child exams</li>
-                <li>Women’s and men’s health screenings</li>
-                <li>
-                  Chronic disease management (diabetes, asthma, hypertension)
-                </li>
-              </ul>
-            </div>
-            {/* Preventive Care */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Preventive Care</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Health screenings (blood tests, cholesterol checks)</li>
-                <li>Weight management and dietary guidance</li>
-                <li>Smoking cessation support</li>
-              </ul>
-            </div>
-            {/* Diagnostic Services */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">
-                Diagnostic Services
-              </h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>On-site lab tests (blood work, urinalysis)</li>
-                <li>Rapid diagnostic testing (COVID, strep, flu)</li>
-                <li>ECG and cardiac assessments</li>
-              </ul>
-            </div>
-            {/* Virtual Care / Telemedicine */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">
-                Virtual Care / Telemedicine
-              </h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Remote consultations via video or phone</li>
-                <li>Online follow-ups</li>
-              </ul>
-            </div>
-            {/* Prescription Services */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">
-                Prescription Services
-              </h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Information on prescription refills and renewals</li>
-                <li>Request policies available online</li>
-              </ul>
-            </div>
-            {/* Specialty Care */}
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-semibold mb-4">
-                Specialty Care (If Available)
-              </h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Mental health support and counseling</li>
-                <li>Nutritional counseling</li>
-                <li>Travel medicine consultations</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="py-12 bg-white">
+      <div className="relative">
+        <svg
+          className="w-full h-20 text-[#d1ebfc] -mb-1"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="currentColor"
+            fillOpacity="1"
+            d="M0,224L48,192C96,160,192,96,288,69.3C384,43,480,53,576,80C672,107,768,149,864,144C960,139,1056,85,1152,64C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+      <section className="py-8 bg-[#d1ebfc]">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Patient Education & Resources
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Educational Health Blog */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">
-                Educational Health Blog
-              </h3>
-              <p className="mb-2">
-                Read our articles on seasonal health issues, preventive care,
-                and wellness tips. Stay up-to-date with health alerts and
-                announcements.
-              </p>
-              <a href="/blog" className="text-blue-600 underline">
-                Read our Blog &rarr;
-              </a>
-            </div>
-            {/* FAQs */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">FAQs</h3>
-              <p className="mb-2">
-                Find answers to commonly asked questions about the clinic, our
-                services, and our policies.
-              </p>
-              <a href="/faqs" className="text-blue-600 underline">
-                View FAQs &rarr;
-              </a>
-            </div>
-            {/* News & Updates */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">News & Updates</h3>
-              <p className="mb-2">
-                Stay informed about new services, special programs, and
-                clinic-hosted events such as vaccine drives.
-              </p>
-              <a href="/news" className="text-blue-600 underline">
-                Learn More &rarr;
-              </a>
-            </div>
-            {/* COVID-19 Updates */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">COVID-19 Updates</h3>
-              <p className="mb-2">
-                Access current guidelines, safety measures, and information on
-                vaccination and testing availability.
-              </p>
-              <a href="/covid-updates" className="text-blue-600 underline">
-                Get the Latest &rarr;
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-12">
+          <div className="mt-2">
             <h3 className="text-2xl font-semibold mb-4">Additional Services</h3>
-            <ul className="list-disc pl-5 grid grid-cols-1 md:grid-cols-2 gap-2">
-              <li>Injury &amp; Illness Care</li>
-              <li>Common Viral Illnesses</li>
-              <li>Wart Treatments</li>
-              <li>Allergies &amp; Asthma</li>
-              <li>Skin Rashes</li>
-              <li>Driver’s Medical</li>
-              <li>Sexually Transmitted Diseases</li>
-              <li>Medication Renewals</li>
-              <li>Musculoskeletal Injuries</li>
-              <li>Urinary &amp; Vaginal Infections</li>
-              <li>WSIB-related Medical Services</li>
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {/* First Column of List Items */}
+              <ul className="list-disc pl-5 space-y-3">
+                <li>Injury &amp; Illness Care</li>
+                <li>Common Viral Illnesses</li>
+                <li>Wart Treatments</li>
+                <li>Allergies &amp; Asthma</li>
+                <li>Skin Rashes</li>
+              </ul>
+
+              {/* Second Column of List Items */}
+              <ul className="list-disc pl-5 space-y-3">
+                <li>Driver’s Medical</li>
+                <li>Sexually Transmitted Diseases</li>
+                <li>Medication Renewals</li>
+                <li>Musculoskeletal Injuries</li>
+                <li>Urinary &amp; Vaginal Infections</li>
+              </ul>
+
+              {/* Third Column with the Image */}
+              {/* <div className=" hidden md:flex items-center justify-center">
+                <img
+                  src="/earth.png"
+                  alt="Additional Services"
+                  className="w-50 h-50"
+                />
+              </div> */}
+              <ul className="list-disc pl-5 space-y-3">
+                <li>Blood Pressure Checks</li>
+                <li>Ear Wax Removal</li>
+                <li>Travel Health Advice &amp; Vaccinations</li>
+                <li>Smoking Cessation Support</li>
+                <li>Mental Health Consultations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* 1 x 7 Icons with Labels */}
+        <div className="max-w-7xl mx-auto px-0 pt-14 pb-10 ">
+          <div className="grid grid-cols-2 sm:grid-cols-7 gap-6">
+            {/* ADHD */}
+            <div className="flex flex-col items-center text-center">
+              <img src="/adhd.png" alt="ADHD" className="w-16 h-16" />
+              <p className="mt-2 font-semibold">ADHD</p>
+            </div>
+
+            {/* Weight Loss */}
+            <div className="flex flex-col items-center text-center">
+              <img
+                src="/weight-loss.png"
+                alt="Weight Loss"
+                className="w-16 h-16"
+              />
+              <p className="mt-2 font-semibold">Weight Loss</p>
+            </div>
+
+            {/* Birth Control Prescription */}
+            <div className="flex flex-col items-center text-center">
+              <img
+                src="/rx-2.png"
+                alt="Birth Control Prescription"
+                className="w-16 h-16"
+              />
+              <p className="mt-2 font-semibold">Birth Control</p>
+            </div>
+
+            {/* Prescription (Rx) */}
+            <div className="flex flex-col items-center text-center">
+              <img src="/rx.png" alt="Prescription" className="w-16 h-16" />
+              <p className="mt-2 font-semibold">Prescription</p>
+            </div>
+
+            {/* ED */}
+            <div className="flex flex-col items-center text-center">
+              <img src="/ed.png" alt="ED" className="w-16 h-16" />
+              <p className="mt-2 font-semibold">ED</p>
+            </div>
+
+            {/* Back Pain */}
+            <div className="flex flex-col items-center text-center">
+              <img src="/back-pain.png" alt="Back Pain" className="w-16 h-16" />
+              <p className="mt-2 font-semibold">Back Pain</p>
+            </div>
+
+            {/* Headache */}
+            <div className="flex flex-col items-center text-center">
+              <img src="/headache.png" alt="Headache" className="w-16 h-16" />
+              <p className="mt-2 font-semibold">Headache</p>
+            </div>
           </div>
         </div>
       </section>
+
       {/* --- End Custom Page Content --- */}
+
+      {/* <img src="/process.png" className="mx-auto max-w-5xl" /> */}
 
       <OurDoctors />
       <TestimonialsAndStats />
