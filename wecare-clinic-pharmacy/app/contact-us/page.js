@@ -74,7 +74,7 @@ export default function ContactUs() {
                 <br />
                 169 Dundas St E, Mississauga, ON L5A 1W4
                 <br />
-                Floor 1 – Dundas Centre
+                Dundas Centre
               </p>
               <p className="text-base text-gray-700 mt-2">
                 <strong>Phone:</strong> (905) 275-1933
