@@ -236,7 +236,7 @@ export default function Home() {
                         className="text-[#004a7f] w-4 h-4"
                       />
                       <span className="text-lg font-semi-bold">
-                        (905) 749-9990
+                        (905) 275-1935
                       </span>
                     </div>
                   </div>
@@ -248,7 +248,7 @@ export default function Home() {
                         className="text-[#004a7f] w-4 h-4"
                       />
                       <span className="text-lg font-semi-bold">
-                        (905) 749-9991
+                        (905) 275-1935
                       </span>
                     </div>
                   </div>

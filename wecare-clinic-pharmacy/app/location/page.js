@@ -18,7 +18,7 @@ export default function LocationPage() {
         height="30vh"
         overlayOpacity={"0.21"}
         title={"WeCare Walk-in Clinic & Pharmacy"}
-        subtitle={"4.5 ★ (218) – Walk-in Clinic in Mississauga, Ontario"}
+        subtitle={"5 ★ (218) – Walk-in Clinic in Mississauga, Ontario"}
       />
 
       {/* Main Content */}

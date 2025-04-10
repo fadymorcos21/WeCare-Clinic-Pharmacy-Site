@@ -46,7 +46,7 @@ export default function CallOrNewPatientSection() {
               Send Request
             </button>
           </form>
-          <p className="text-lg">Or you can call us at +1 (905) 848-4844.</p>
+          <p className="text-lg">Or you can call us at +1 (905) 275-1935.</p>
         </div>
 
         {/* 2) Separator */}
@@ -80,7 +80,7 @@ export default function CallOrNewPatientSection() {
             Call us now to schedule your appointment! Our team is ready to
             assist you with any needs promptly.
           </p>
-          <div className="text-lg font-semibold">Phone: +1 (905) 848-4844</div>
+          <div className="text-lg font-semibold">Phone: (905) 275-1935</div>
           <p>
             <span className="text-lg font-semibold">Address:</span>
             <br />

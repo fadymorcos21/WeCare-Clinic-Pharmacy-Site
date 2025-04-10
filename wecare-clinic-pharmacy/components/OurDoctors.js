@@ -4,14 +4,14 @@ import React from "react";
 const doctors = [
   {
     name: "Dr. Thomas Reynolds",
-    title: "Family Physician",
-    bio: "Specializes in comprehensive family medicine with a focus on preventive care, chronic disease management, and men’s health.",
+    title: "Walk-In Specialist",
+    bio: "Expert in acute care, providing immediate medical attention with compassion and efficiency.",
     image: "/doc1.png",
   },
   {
-    name: "Dr. Mark Thomson",
-    title: "Walk-In Specialist",
-    bio: "Expert in acute care, providing immediate medical attention with compassion and efficiency.",
+    name: "Dr. Mansour",
+    title: "Family Physician",
+    bio: "Specializes in comprehensive family medicine with a focus on preventive care, chronic disease management, and men’s health.",
     image: "/docw.png",
   },
   {
