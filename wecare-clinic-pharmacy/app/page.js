@@ -116,7 +116,7 @@ export default function Home() {
 
           {/* Contact CTA & Hamburger */}
           <div className="flex items-center gap-8">
-            <span className="text-[#004a7f] hidden sm:block font-normal">
+            <span className="text-[#004a7f] hidden lg:block font-normal">
               Call to book your appointment now!
             </span>
             <motion.button
@@ -219,10 +219,10 @@ export default function Home() {
                   </motion.button>
 
                   <motion.button
-                    onClick={() => router.push("/contact-us")}
+                    onClick={() => router.push("/walk-in-clinic")}
                     className="bg-transparent text-[#004a7f] border border-[#004a7f] hover:border-[#60b9f7] px-6 py-3 rounded-lg hover:bg-[#60b9f7] hover:text-white transition-colors duration-300 text-md 2xl:text-xl"
                   >
-                    Contact Us
+                    New Patient
                   </motion.button>
                 </div>
 
