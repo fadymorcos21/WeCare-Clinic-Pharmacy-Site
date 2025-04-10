@@ -7,7 +7,7 @@ export default function WeCarePharmacyLayout() {
   const router = useRouter();
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
       {/* SECTION 1: "We Care Pharmacy" (2/3 text, 1/3 image) */}
       <section className="max-w-7xl mx-auto px-6 pt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">

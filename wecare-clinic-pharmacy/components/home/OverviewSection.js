@@ -27,8 +27,8 @@ export default function OverviewWithImage() {
                 <p className="text-[#4b4b4b] leading-relaxed">
                   We’re here to support your health with compassionate, prompt
                   medical care. Whether you’re coming in for a routine visit or
-                  need urgent attention, our experienced physicians are ready to
-                  help with a wide range of services to meet your needs.
+                  need attention, our experienced physicians are ready to help
+                  with a wide range of services to meet your needs.
                 </p>
               </div>
               {/* Bottom Section: Two Columns */}

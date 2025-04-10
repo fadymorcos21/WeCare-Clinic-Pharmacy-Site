@@ -13,6 +13,7 @@ import OurDoctors from "@/components/OurDoctors";
 import TestimonialsAndStats from "@/components/home/TestimonialsAndStats";
 import { Star, Users, CalendarCheck, MessageSquare } from "lucide-react";
 import Footer from "@/components/Footer";
+import { Menu, X } from "lucide-react";
 
 const stats = [
   {
@@ -48,6 +49,7 @@ const navItems = [
 export default function Home() {
   const router = useRouter();
   const navbarRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(0);
 
   useEffect(() => {
@@ -74,31 +76,35 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative top-0 left-0 w-full flex items-center justify-between pl-18 pr-5 md:pl-24 md:pr-12 py-6 md:pb-6 md:pt-10 z-10"
+          className={`relative z-[9998] top-0 left-0 w-full  flex items-center justify-between pl-18 pr-5 md:pl-24 md:pr-12 py-6 md:pb-6 md:pt-10 z-10 ${
+            isMenuOpen ? "bg-white" : ""
+          }`}
         >
-          {/* Logo & Title */}
+          {/* Logo & Desktop Links */}
           <div className="flex items-center gap-2">
-            <motion.div
-              className="flex w-10 h-10 items-center justify-center"
-              whileHover={{ scale: 1.1 }}
-            >
-              <img
-                src="/logo-3.png"
-                alt="Clinic Logo"
-                className="absolute object-contain max-w-[155] max-h-[72px]"
-              />
-            </motion.div>
-            {/* Navigation Links */}
+            <Link href="/">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="flex w-10 h-10 items-center justify-center"
+              >
+                <img
+                  src="/logo-3.png"
+                  alt="Clinic Logo"
+                  className="absolute object-contain max-w-[155] max-h-[72px]"
+                />
+              </motion.div>
+            </Link>
+
             <motion.ul
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="hidden px-10 md:flex ml-12 gap-8 text-[#05294a]"
+              className="hidden px-10 md:flex ml-12 gap-8 text-[#05294a] font-semibold"
             >
               {navItems.map((item, i) => (
                 <Link key={i} href={item.url}>
                   <motion.li
-                    className="cursor-pointer hover:opacity-80 font-semibold"
+                    className="cursor-pointer hover:opacity-80"
                     whileHover={{ scale: 1.05 }}
                   >
                     {item.label}
@@ -108,7 +114,7 @@ export default function Home() {
             </motion.ul>
           </div>
 
-          {/* Contact Us Button */}
+          {/* Contact CTA & Hamburger */}
           <div className="flex items-center gap-8">
             <span className="text-[#004a7f] hidden sm:block font-normal">
               Call to book your appointment now!
@@ -117,11 +123,52 @@ export default function Home() {
               onClick={() => router.push("/contact-us")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#004a7f] text-white px-4 py-2 rounded-md hover:bg-[#00375e]"
+              className="hidden sm:block bg-[#004a7f] text-white px-4 py-2 rounded-md hover:bg-[#00375e]"
             >
               Contact Us
             </motion.button>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="sm:hidden text-[#004a7f]"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
+
+          {/* Mobile Dropdown */}
+          {isMenuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="sm:hidden absolute top-full left-0 w-full bg-white shadow-lg z-20"
+            >
+              <ul className="flex flex-col gap-4 px-6 py-4">
+                {navItems.map((item, i) => (
+                  <li key={i}>
+                    <Link
+                      href={item.url}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block py-2 text-[#05294a] font-semibold hover:text-[#004a7f]"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link
+                    href={"/contact-us"}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block py-2 text-[#05294a] font-semibold hover:text-[#004a7f]"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+          )}
         </motion.nav>
 
         {/* Landing Section */}
@@ -172,10 +219,10 @@ export default function Home() {
                   </motion.button>
 
                   <motion.button
-                    onClick={() => router.push("/walk-in-clinic")}
+                    onClick={() => router.push("/contact-us")}
                     className="bg-transparent text-[#004a7f] border border-[#004a7f] hover:border-[#60b9f7] px-6 py-3 rounded-lg hover:bg-[#60b9f7] hover:text-white transition-colors duration-300 text-md 2xl:text-xl"
                   >
-                    New Patient
+                    Contact Us
                   </motion.button>
                 </div>
 
