@@ -94,7 +94,7 @@ export default function PharmacyPage() {
               {/* Right Column: Four Service Cards (2x2) */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Online Refill Card */}
-                <div className="p-6 bg-gray-50 border rounded-lg shadow hover:shadow-lg transition flex flex-col items-start text-left">
+                <div className="p-6 bg-gray-100 border rounded-lg shadow hover:shadow-lg transition flex flex-col items-start text-left">
                   <h3 className="sr-only">Online Refill</h3>
                   <img
                     src="/online-refill.png"

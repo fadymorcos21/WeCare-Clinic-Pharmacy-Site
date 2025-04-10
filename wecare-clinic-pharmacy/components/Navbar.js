@@ -61,17 +61,19 @@ export default function Navbar() {
 
         {/* Desktop Contact Us Button & Mobile Hamburger */}
         <div className="flex items-center gap-8">
-          <span className="text-[#004a7f] hidden sm:block font-normal">
+          <span className="text-[#004a7f] hidden lg:block font-normal">
             Call to book your appointment now!
           </span>
           <div className="hidden sm:block">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#004a7f] text-white px-4 py-2 rounded-md hover:bg-[#00375e]"
-            >
-              Contact Us
-            </motion.button>
+            <Link href={"/contact-us"}>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#004a7f] text-white px-4 py-2 rounded-md hover:bg-[#00375e]"
+              >
+                Contact Us
+              </motion.button>
+            </Link>
           </div>
           {/* Hamburger menu appears on small screens */}
           <div className="sm:hidden">
@@ -101,6 +103,15 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <li key={"Contact Us"}>
+              <Link
+                href={"/contact-us"}
+                onClick={() => setIsMenuOpen(false)}
+                className="block py-2 text-[#05294a] font-semibold hover:text-[#004a7f]"
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
       )}
