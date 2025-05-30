@@ -103,18 +103,18 @@ export default function MinorAilmentsPage() {
         overlayOpacity={0.2}
       />
 
-      {/* Intro */}
-      <section className="bg-blue-100 py-8 px-6">
-        <div className="max-w-4xl mx-auto text-center text-gray-800 text-lg">
-          Pharmacists in Ontario can prescribe for minor health conditions. If
-          you have an Ontario health card, you’re eligible for this free service
-          — no appointment necessary.
+      {/* Intro with dark blue background and white text */}
+      <section className="bg-[#004a7f] py-8 px-6">
+        <div className="max-w-4xl mx-auto text-center text-white text-lg">
+          WeCare Pharmacists are certified to prescribe for minor health
+          conditions. If you have an Ontario health card, you’re eligible for
+          this free service — no appointment necessary.
         </div>
       </section>
 
       {/* Ailments Grid */}
-      <section className="bg-white py-12 px-6 bg-gradient-to-r from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-gradient-to-r from-gray-50 to-blue-50 py-12 px-6">
+        <div className="max-w-7xl mx-auto mt-5">
           <h2 className="text-3xl font-bold text-center text-[#004a7f] mb-10">
             Common Minor Ailments We Treat
           </h2>

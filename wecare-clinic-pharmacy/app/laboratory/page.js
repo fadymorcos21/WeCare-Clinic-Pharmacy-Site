@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import { PhoneIcon } from "@heroicons/react/24/solid";
@@ -80,7 +81,7 @@ export default function LaboratoryPage() {
           </div>
         </div>
         <div className="max-w-6xl mx-auto pt-17">
-          <h3 className=" text-2xl font-bold mb-3">Laboratory Details:</h3>
+          <h3 className="text-2xl font-bold mb-3">Laboratory Details:</h3>
           <p className="text-gray-700">
             At WeCare Clinic, we are proud to offer an exclusive on-site lab
             dedicated solely to our patients, ensuring superior convenience and
@@ -93,15 +94,13 @@ export default function LaboratoryPage() {
           </p>
         </div>
       </section>
-      <div className="bg-[#1E4E8C]  py-4 px-8 flex flex-col md:flex-row items-center justify-center md:justify-between text-white">
-        {/* LEFT SIDE */}
+
+      <div className="bg-[#1E4E8C] py-4 px-8 flex flex-col md:flex-row items-center justify-center md:justify-between text-white">
         <div className="max-w-6xl mx-auto flex gap-15 sm:gap-50 lg:gap-100">
-          <div className="flex  items-center space-x-4 mb-4 md:mb-0">
-            {/* Diamond Shape with Icon */}
+          <div className="flex items-center space-x-4 mb-4 md:mb-0">
             <div className="relative w-12 h-12 bg-white text-[#1E4E8C] flex items-center justify-center transform rotate-45 rounded-md">
               <PhoneIcon className="w-6 h-6 transform -rotate-45" />
             </div>
-            {/* Text */}
             <div>
               <p className="font-semibold text-base md:text-lg">
                 Call Us to Book Now
@@ -110,13 +109,15 @@ export default function LaboratoryPage() {
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
-          <button className="bg-white text-[#1E4E8C] font-semibold px-6 py-2 rounded-md flex items-center space-x-2 hover:opacity-90 transition">
-            <PhoneIcon className="w-5 h-5" />
-            <span>CONTACT US</span>
-          </button>
+          <Link href="/contact-us">
+            <button className="bg-white text-[#1E4E8C] font-semibold px-6 py-2 rounded-md flex items-center space-x-2 hover:opacity-90 transition">
+              <PhoneIcon className="w-5 h-5" />
+              <span>CONTACT US</span>
+            </button>
+          </Link>
         </div>
       </div>
+
       <TestimonialsAndStats />
       <Footer />
     </>

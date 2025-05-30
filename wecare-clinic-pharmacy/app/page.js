@@ -40,7 +40,7 @@ const stats = [
 
 const navItems = [
   { label: "Walk-In Clinic", url: "/walk-in-clinic" },
-  { label: "Family Practice", url: "/walk-in-clinic" },
+  { label: "Minor Ailments", url: "/pharmacy/minor-ailments" },
   { label: "Laboratory", url: "/laboratory" },
   { label: "Pharmacy", url: "/pharmacy" },
   { label: "Location", url: "/location" },
@@ -300,7 +300,7 @@ export default function Home() {
                 </motion.div>
                 {/* Card 1: Family Medicine */}
                 <motion.div
-                  onClick={() => router.push("/walk-in-clinic")}
+                  onClick={() => router.push("/pharmacy/minor-ailments")}
                   className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 cursor-pointer"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -312,7 +312,7 @@ export default function Home() {
                     className="w-12 h-11 sm:w-17 sm:h-17 mb-4"
                   />
                   <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
-                    Minor Ailments
+                    Prescribing Pharmacist
                   </h3>
                   <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
                     No time for a doctor? Our pharmacists are certified to
