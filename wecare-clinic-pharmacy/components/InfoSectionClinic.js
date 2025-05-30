@@ -71,11 +71,6 @@ export default function InfoSectionClinic() {
                     tailor-made care for each individual who walks through our
                     doors.
                   </p>
-                  <Link href="/our-doctors">
-                    <button className="inline-block bg-[#155dfc] text-white font-bold py-3 px-6 rounded-full shadow border border-[#155dfc] hover:border hover:bg-white hover:text-[#155dfc] transition">
-                      Meet Our Doctors &rarr;
-                    </button>
-                  </Link>
                 </div>
               </div>
             </div>
