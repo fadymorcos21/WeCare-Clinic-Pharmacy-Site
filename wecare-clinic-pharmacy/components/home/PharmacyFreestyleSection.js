@@ -187,7 +187,7 @@ export default function WeCarePharmacyLayout() {
           {/* Right: Ailments in 2 columns with green checks */}
           <div className="grid">
             <h2 className="text-xl md:text-3xl font-bold text-[#05294a] mb-4">
-              Ontario pharmacists can now prescribe for 19 minor ailments:
+              Our Pharmacists can prescribe for 19 minor ailments:
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
               {[
