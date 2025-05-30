@@ -316,7 +316,7 @@ export default function Home() {
                     Walk-In Clinic
                   </h3>
                   <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
-                    Immediate care for non-emergency medical needs.
+                    Immediate care for any non-emergency medical needs.
                   </p>
                 </motion.div>
 
