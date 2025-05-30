@@ -1,4 +1,6 @@
+// components/WeCarePharmacyLayout.jsx
 "use client";
+
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
@@ -8,31 +10,13 @@ export default function WeCarePharmacyLayout() {
 
   return (
     <div className="bg-white">
-      {/* SECTION 1: "We Care Pharmacy" (2/3 text, 1/3 image) */}
+      {/* SECTION 1: "We Care Pharmacy" */}
       <section className="max-w-7xl mx-auto px-6 pt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          {/* Left: 2/3 text */}
           <div className="md:col-span-2">
-            <h1 className="flex items-center text-3xl md:text-4xl font-bold text-[#05294a] mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-[#05294a] mb-4">
               We Care Pharmacy
-              {/* <span className="ml-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 fill-red-600"
-                  viewBox="0 0 24 24"
-                  stroke="red"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 016.364 
-        6.364L12 21.364 4.318 12.682a4.5 4.5 0 010-6.364z"
-                  />
-                </svg>
-              </span> */}
             </h1>
-
             <p className="text-gray-700 leading-relaxed mb-4">
               Welcome to We Care Pharmacy, where your health is our top
               priority. We provide a wide range of services to ensure you get
@@ -44,8 +28,6 @@ export default function WeCarePharmacyLayout() {
               to your needs. Explore our services below to see how we can help!
             </p>
           </div>
-
-          {/* Right: 1/3 image */}
           <div>
             <img
               src="/download.png"
@@ -57,7 +39,7 @@ export default function WeCarePharmacyLayout() {
         </div>
       </section>
 
-      {/* SECTION 2: Rx Quick Access Services (4 in a row) */}
+      {/* SECTION 2: Quick Access Services */}
       <section className="max-w-7xl mx-auto px-6 py-6">
         <h2 className="text-2xl md:text-3xl font-bold text-[#05294a] mb-8">
           Quick Access Services
@@ -72,12 +54,12 @@ export default function WeCarePharmacyLayout() {
               Request your prescription refills with just a few clicks.
             </p>
             <ul className="list-disc list-inside text-gray-600 mb-4">
-              <li>Secure & fast processing</li>
+              <li>Secure &amp; fast processing</li>
               <li>User-friendly form</li>
             </ul>
             <button
               onClick={() => router.push("/pharmacy/online-refill")}
-              className="mt-auto bg-[#f49988] hover:bg-[#d17564] text-white font-semibold py-2 px-4 rounded"
+              className="mt-auto inline-block bg-[#f49988] hover:bg-[#d17564] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-transform hover:scale-105"
             >
               Refill Now
             </button>
@@ -93,11 +75,11 @@ export default function WeCarePharmacyLayout() {
             </p>
             <ul className="list-disc list-inside text-gray-600 mb-4">
               <li>Effortless process</li>
-              <li>You'll never look back</li>
+              <li>You’ll never look back</li>
             </ul>
             <button
               onClick={() => router.push("/pharmacy/transfer-rx")}
-              className="mt-auto bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-4 rounded"
+              className="mt-auto inline-block bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-transform hover:scale-105"
             >
               Transfer Now
             </button>
@@ -117,7 +99,7 @@ export default function WeCarePharmacyLayout() {
             </ul>
             <button
               onClick={() => router.push("/contact-us")}
-              className="mt-auto bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-4 rounded"
+              className="mt-auto inline-block bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-transform hover:scale-105"
             >
               Contact Us
             </button>
@@ -129,7 +111,7 @@ export default function WeCarePharmacyLayout() {
               Blister Packaging
             </h3>
             <p className="text-gray-700 mb-3">
-              Stay organized with our Compliance aids
+              Stay organized with our compliance aids.
             </p>
             <ul className="list-disc list-inside text-gray-600 mb-4">
               <li>Elite packaging service</li>
@@ -137,7 +119,7 @@ export default function WeCarePharmacyLayout() {
             </ul>
             <button
               onClick={() => router.push("/contact-us")}
-              className="mt-auto bg-[#f49988] hover:bg-[#d17564] text-white font-semibold py-2 px-4 rounded"
+              className="mt-auto inline-block bg-[#f49988] hover:bg-[#d17564] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-transform hover:scale-105"
             >
               Contact Us
             </button>
@@ -145,15 +127,10 @@ export default function WeCarePharmacyLayout() {
         </div>
       </section>
 
-      {/* SECTION 3: Free Minor Ailment Assessment 
-          Left side: text + image in 2 rows
-          Right side: 2-column ailments with green checks
-      */}
+      {/* SECTION 3: Free Minor Ailment Assessment */}
       <section className="max-w-7xl mx-auto px-6 pt-6 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left: 1x2 layout -> text on top, image on bottom */}
           <div className="flex flex-col gap-6">
-            {/* Text block */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-[#05294a] mb-4">
                 Free Minor Ailment Assessment
@@ -161,12 +138,16 @@ export default function WeCarePharmacyLayout() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Save time by getting a direct pharmacist diagnosis and
                 prescription for common ailments. No need to wait for a doctor’s
-                appointment—walk in or book a free consultation anytime. Did you
-                know pharmacists can prescribe for these minor ailments? It’s
-                quick, convenient, and best of all, it’s free!
+                appointment— walk in or book a free consultation anytime. Did
+                you know pharmacists can prescribe for these minor ailments?
+                It’s quick, convenient, and best of all, it’s free!
               </p>
+              <Link href="/pharmacy/minor-ailments">
+                <button className="mt-4 inline-block bg-[#004a7f] hover:bg-[#00375e] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-transform hover:scale-105">
+                  Learn more about Minor Ailment services →
+                </button>
+              </Link>
             </div>
-            {/* Image block */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-[#05294a] mb-4">
                 Free Medication Review Consultations
@@ -183,11 +164,9 @@ export default function WeCarePharmacyLayout() {
               </p>
             </div>
           </div>
-
-          {/* Right: Ailments in 2 columns with green checks */}
-          <div className="grid">
+          <div>
             <h2 className="text-xl md:text-3xl font-bold text-[#05294a] mb-4">
-              Our Pharmacists can prescribe for 19 minor ailments:
+              Our Pharmacists Can Prescribe for 19 Minor Ailments:
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
               {[
@@ -212,7 +191,6 @@ export default function WeCarePharmacyLayout() {
                 "Nausea & vomiting in pregnancy",
               ].map((ailment) => (
                 <div key={ailment} className="flex items-start gap-2">
-                  {/* Green check icon */}
                   <svg
                     className="w-5 h-5 text-green-500 mt-[2px]"
                     fill="none"

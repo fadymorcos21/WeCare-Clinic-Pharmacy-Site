@@ -167,7 +167,6 @@ export default function Page() {
 
       {/* <img src="/process.png" className="mx-auto max-w-5xl" /> */}
 
-      <OurDoctors />
       <TestimonialsAndStats />
       <Footer />
     </>

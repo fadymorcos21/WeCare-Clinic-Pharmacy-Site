@@ -371,7 +371,6 @@ export default function Home() {
       <OverviewSection />
       <PharmacyFreestyleSection />
       <PharmacySplitSection />
-      <OurDoctors />
       <TestimonialsAndStats />
       <Footer />
     </div>

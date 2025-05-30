@@ -1,3 +1,4 @@
+// components/InfoSection.jsx
 "use client";
 import React from "react";
 import Link from "next/link";
@@ -29,7 +30,6 @@ export default function InfoSection() {
   return (
     <>
       <div className="relative overflow-hidden py-12">
-        {/* Left side background image – visible on large screens only */}
         <div
           className="absolute hidden lg:block w-1/2 h-[90%] rounded-r-xl shadow-lg bg-cover bg-center"
           style={{
@@ -40,15 +40,13 @@ export default function InfoSection() {
 
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
-            {/* Left Column Spacer (empty on mobile) */}
             <div className="hidden lg:block" />
 
-            {/* Right Column: Info */}
             <div className="lg:pl-16">
               <div className="lg:max-w-xl">
-                {/* Main Header */}
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Ontario Pharmacists Can Now Prescribe For Minor Ailments!
+                  Our Pharmacists here at WeCare Can Prescribe For Minor
+                  Ailments!
                 </h2>
                 <p className="text-gray-700 mb-6">
                   If you're experiencing minor health concerns, there's no need
@@ -58,7 +56,6 @@ export default function InfoSection() {
                   professional care right in your community.
                 </p>
 
-                {/* Why Visit Your Pharmacist */}
                 <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                   Why Visit Your Pharmacist for Minor Ailments?
                 </h3>
@@ -83,15 +80,20 @@ export default function InfoSection() {
                   Come in now and get a free minor ailment assessment!
                 </p>
 
-                <Link href="/pharmacy/book-consultation">
-                  <button className="inline-block bg-[#155dfc] text-white font-bold py-3 px-6 rounded-full shadow border border-[#155dfc] hover:border hover:bg-[white]  hover:text-[#155dfc] transition">
-                    Schedule A Free Minor Ailment Assement
-                  </button>
-                  {/* <button className="ml-5 inline-block bg-white text-[#155dfc] border-2 border-[#155dfc] font-bold py-3 px-6 rounded-full shadow hover:text-white hover:bg-[#155dfc] transition">
-                    Book Consultation
-                  </button> */}
-                </Link>
-                <p className="text-gray-700 mt-6">
+                <div className="flex flex-wrap gap-4 mb-6">
+                  <Link href="/pharmacy/book-consultation">
+                    <button className="inline-block bg-[#155dfc] text-white font-bold py-3 px-6 rounded-full shadow border border-[#155dfc] hover:border hover:bg-white hover:text-[#155dfc] transition-transform hover:scale-105">
+                      Schedule Assessment
+                    </button>
+                  </Link>
+                  <Link href="/minor-ailments">
+                    <button className="inline-block bg-[#155dfc] text-white font-bold py-3 px-6 rounded-full shadow border border-[#155dfc] hover:border hover:bg-white hover:text-[#155dfc] transition-transform hover:scale-105">
+                      See All Minor Ailments
+                    </button>
+                  </Link>
+                </div>
+
+                <p className="text-gray-700">
                   No appointment necessary — Walk-Ins are always welcome too
                 </p>
               </div>
@@ -100,7 +102,6 @@ export default function InfoSection() {
         </div>
       </div>
 
-      {/* Minor Ailments Title & List */}
       <div className="mx-auto lg:max-w-7xl 2xl:max-w-[1600px] px-6 pb-20 lg:px-8 mt-12">
         <h3 className="text-3xl font-bold text-gray-900 mb-2">
           Minor Ailments
