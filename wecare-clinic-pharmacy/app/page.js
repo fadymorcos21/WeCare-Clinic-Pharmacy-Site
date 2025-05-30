@@ -278,27 +278,6 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.9 }}
             >
               <motion.div className="mx-auto grid grid-cols-4 sm:grid-cols-4 gap-0 sm:gap-3 lg:gap-8 2xl:gap-12">
-                {/* Card 1: Family Medicine */}
-                <motion.div
-                  onClick={() => router.push("/walk-in-clinic")}
-                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 cursor-pointer"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.7, delay: 1 }}
-                >
-                  <img
-                    src="/family-medicine-3.png"
-                    alt="Primary Care Icon"
-                    className="w-12 h-11 sm:w-17 sm:h-17 mb-4"
-                  />
-                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
-                    Family Medicine
-                  </h3>
-                  <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
-                    Comprehensive healthcare for patients of all ages.
-                  </p>
-                </motion.div>
-
                 {/* Card 2: Walk-In Clinic */}
                 <motion.div
                   onClick={() => router.push("/walk-in-clinic")}
@@ -308,15 +287,36 @@ export default function Home() {
                   transition={{ duration: 0.7, delay: 1.2 }}
                 >
                   <img
-                    src="/walk-in-logo-3.png"
+                    src="/family-medicine-3.png"
                     alt="Walk-In Clinic Icon"
                     className="w-11 h-11 sm:w-17 sm:h-17 mb-3"
                   />
-                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
-                    Walk-In Clinic
+                  <h3 className="font-semibold text-md sm:text-lg 2xl:text-2xl mb-2">
+                    Family Practice & Clinic
                   </h3>
                   <p className="text-sm xl:text-lg hidden sm:block text-gray-600">
                     Immediate care for any non-emergency medical needs.
+                  </p>
+                </motion.div>
+                {/* Card 1: Family Medicine */}
+                <motion.div
+                  onClick={() => router.push("/walk-in-clinic")}
+                  className="flex flex-col items-center text-center p-2 sm:p-6 xl:p-8 shadow-2xl bg-white hover:shadow-xl transition-shadow transition-transform duration-300 hover:scale-105 rounded-none sm:rounded-xl first:rounded-l-xl last:rounded-r-xl border-l border-gray-300 first:border-l-0 cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.7, delay: 1 }}
+                >
+                  <img
+                    src="/walk-in-logo-3.png"
+                    alt="Primary Care Icon"
+                    className="w-12 h-11 sm:w-17 sm:h-17 mb-4"
+                  />
+                  <h3 className="font-semibold text-md sm:text-xl 2xl:text-2xl mb-2">
+                    Minor Ailments
+                  </h3>
+                  <p className="text-sm hidden sm:block xl:text-lg text-gray-600">
+                    No time for a doctor? Our pharmacists are certified to
+                    prescribe
                   </p>
                 </motion.div>
 
