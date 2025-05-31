@@ -69,13 +69,7 @@ export default function ServicesSection() {
                     <li>ECG and cardiac assessments</li>
                   </ul>
                 </div>
-                {/* Virtual Care / Telemedicine */}
-                <div>
-                  <h3 className="text-2xl font-semibold mb-4">Virtual Care</h3>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li>Remote consultations via video or phone</li>
-                  </ul>
-                </div>
+
                 {/* Prescription Services */}
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">
