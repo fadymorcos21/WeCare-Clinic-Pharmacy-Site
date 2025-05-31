@@ -51,45 +51,80 @@ export default function ContactUs() {
       <Navbar />
       <div className="bg-gradient-to-r from-gray-50 to-blue-50">
         {/* Main Section */}
-        <section className="mx-auto max-w-7xl px-6 py-16 sm:py-24 ">
+        <section className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-0 md:gap-x-10">
-            {/* Left Column: Heading & Descriptive Text */}
-            <div className="flex flex-col justify-center">
+            {/* Left Column: Contact Details */}
+            <div className="flex flex-col justify-center space-y-6">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
                 Contact Us
               </h1>
-              <p className="text-base text-gray-700 mb-4">
-                Need to get in touch with us? Fill out the form to the right
-                with your inquiry or send us an email at{" "}
-                <a
-                  href="mailto:wecare@gmail.com"
-                  className="text-blue-600 hover:underline font-semibold"
-                >
-                  wecare@gmail.com
-                </a>
-                . We typically reply within 24 hours.
-              </p>
               <p className="text-base text-gray-700">
-                <strong>WeCare Walk-in Clinic & Pharmacy</strong>
+                Need to get in touch with us? You can fill out the form to the
+                right. We typically reply within 24 hours. or call at{" "}
+                <a className="text-blue-600 hover:underline font-semibold">
+                  (905) 275‑1935
+                </a>
+                . We are located at:
                 <br />
-                169 Dundas St E, Mississauga, ON L5A 1W4
+                <strong>169 Dundas St E, Mississauga, ON L5A 1W8</strong>
                 <br />
-                Dundas Centre
               </p>
-              <p className="text-base text-gray-700 mt-2">
-                <strong>Phone:</strong> (905) 275-1933
-              </p>
-              <p className="text-base text-gray-700 mt-2">
-                <strong>Business Hours:</strong>
-                <br />
-                Mon – Thu: 10:00 AM – 7:00 PM
-                <br />
-                Fri: 10:00 AM – 5:00 PM
-                <br />
-                Sat: 10:00 AM – 3:00 PM
-                <br />
-                Sun: Closed
-              </p>
+
+              {/* Clinic Info */}
+              <div>
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  Clinic
+                </h2>
+                <p className="text-base text-gray-700 mt-2">
+                  <strong>Phone:</strong> (905) 275‑1935
+                  <br />
+                  <strong>Fax:</strong> (905) 275‑3742
+                  <br />
+                  <strong>Email:</strong>{" "}
+                  <a
+                    href="mailto:wecaremedical17@gmail.com"
+                    className="text-blue-600 hover:underline"
+                  >
+                    wecaremedical17@gmail.com
+                  </a>
+                </p>
+              </div>
+
+              {/* Pharmacy Info */}
+              <div>
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  Pharmacy
+                </h2>
+                <p className="text-base text-gray-700 mt-2">
+                  <strong>Phone:</strong> (905) 275‑7555
+                  <br />
+                  <strong>Fax:</strong> (905) 275‑0038
+                  <br />
+                  <strong>Email:</strong>{" "}
+                  <a
+                    href="mailto:wecarepharmacy169@gmail.com"
+                    className="text-blue-600 hover:underline"
+                  >
+                    wecarepharmacy169@gmail.com
+                  </a>
+                </p>
+              </div>
+
+              {/* Business Hours */}
+              <div>
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  Business Hours
+                </h2>
+                <p className="text-base text-gray-700">
+                  <strong>Monday – Thursday:</strong> 10:00 AM – 7:00 PM
+                  <br />
+                  <strong>Friday:</strong> 10:00 AM – 5:00 PM
+                  <br />
+                  <strong>Saturday:</strong> 10:00 AM – 3:00 PM
+                  <br />
+                  <strong>Sunday:</strong> Closed
+                </p>
+              </div>
             </div>
 
             {/* Right Column: Contact Form */}
