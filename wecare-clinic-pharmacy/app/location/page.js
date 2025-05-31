@@ -31,7 +31,7 @@ export default function LocationPage() {
               Location Details
             </h2>
             <p className="text-gray-700 mb-2">
-              <strong>Address:</strong> 169 Dundas St E, Mississauga, ON L5A 1W4
+              <strong>Address:</strong> 169 Dundas St E, Mississauga, ON L5A 1W8
             </p>
             <p className="text-gray-700 mb-2">
               <strong>Located in:</strong> Dundas Centre
@@ -86,7 +86,7 @@ export default function LocationPage() {
               </h2>
               <p className="flex items-center text-gray-700 mb-1">
                 <PhoneIcon className="h-5 w-5 text-blue-500 mr-2" />
-                <strong>Phone:</strong>
+                <strong>Clinic:</strong>
                 <a
                   href="tel:905-275-1935"
                   className="ml-2 text-blue-600 hover:text-blue-800 transition"
@@ -96,12 +96,12 @@ export default function LocationPage() {
               </p>
               <p className="flex items-center mt-4 text-gray-700 mb-1">
                 <PhoneIcon className="h-5 w-5 text-blue-500 mr-2" />
-                <strong>Fax:</strong>
+                <strong>Pharmacy:</strong>
                 <a
                   href="tel:905-275-1935"
                   className="ml-2 text-blue-600 hover:text-blue-800 transition"
                 >
-                  (905) 275-1935
+                  (905) 275-7555
                 </a>
               </p>
             </div>
@@ -126,9 +126,10 @@ export default function LocationPage() {
               COME VISIT US
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              Stop by WeCare Pharma at 169 Dundas St E, Mississauga, ON L5A 1W4.
-              Located in the heart of Dundas Centre, our clinic is easily
-              accessible and ready to serve your healthcare needs.
+              Stop by WeCare Pharmacy and Clinic at 169 Dundas St E,
+              Mississauga, ON L5A 1W8. Located in the heart of Dundas Centre,
+              our clinic is easily accessible and ready to serve your healthcare
+              needs.
             </p>
           </section>
 
