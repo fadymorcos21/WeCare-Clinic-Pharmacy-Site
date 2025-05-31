@@ -56,29 +56,32 @@ export default function Footer({
         {/* MAIN FOOTER WITH NEGATIVE MARGIN OVERLAP */}
         <div className="relative left-0 right-0 bottom-0 bg-[#05294a] text-white -mt-8 pt-60 sm:pt-35 ">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Column: Our Services */}
+            {/* Column: Location Info */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Our Services</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>Walk-In Clinic</li>
-                <li>Family Practice</li>
-                <li>Pharmacy</li>
-                <li>On-Site Lab</li>
-                <li>Preventive Care</li>
-              </ul>
-            </div>
-
-            {/* Column: Contact Info */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+              <h3 className="text-xl font-semibold mb-4">Location</h3>
               <ul className="space-y-2 text-gray-300">
                 <li className="font-bold">WeCare Walk-in Clinic & Pharmacy</li>
                 <li>169 Dundas St E</li>
-                <li>Mississauga, ON L5A 1W4</li>
-                <li>Phone: (905) 275-1935</li>
+                <li>Mississauga, ON L5A 1W8</li>
+                <li>Dundas Centre</li>
               </ul>
             </div>
 
+            {/* Column: Clinic & Pharmacy */}
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li className="font-bold text-white">Clinic</li>
+                <li>Phone: (905) 275-1935</li>
+                <li>Fax: (905) 275-3742</li>
+                <li>Email: wecaremedical17@gmail.com</li>
+
+                <li className="mt-4 font-bold text-white">Pharmacy</li>
+                <li>Phone: (905) 275-7555</li>
+                <li>Fax: (905) 275-0038</li>
+                <li>Email: wecarepharmacy169@gmail.com</li>
+              </ul>
+            </div>
             {/* Column: Hours of Operation */}
             <div>
               <h3 className="text-xl font-semibold mb-4">Hours of Operation</h3>
