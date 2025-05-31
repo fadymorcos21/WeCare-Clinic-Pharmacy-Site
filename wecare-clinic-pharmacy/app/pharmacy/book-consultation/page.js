@@ -94,14 +94,22 @@ export default function ConsultationBookingPage() {
     }
 
     let defaultStart, defaultEnd;
-    if (dayOfWeek === 6) {
-      // Saturday hours: 10:00 AM to 1:30 PM (13.5)
+    if (dayOfWeek === 0) {
+      // Sunday — closed
+      setAvailableSlots([]);
+      return;
+    } else if (dayOfWeek === 6) {
+      // Saturday: 10 AM to 3 PM
       defaultStart = 10.0;
-      defaultEnd = 13.5;
+      defaultEnd = 15.0;
+    } else if (dayOfWeek === 5) {
+      // Friday: 10 AM to 5 PM
+      defaultStart = 10.0;
+      defaultEnd = 17.0;
     } else {
-      // Weekday hours: 9:30 AM to 6:00 PM (18.0)
-      defaultStart = 9.5;
-      defaultEnd = 18.0;
+      // Monday–Thursday: 10 AM to 7 PM
+      defaultStart = 10.0;
+      defaultEnd = 19.0;
     }
 
     let slots;
