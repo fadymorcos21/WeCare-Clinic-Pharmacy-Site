@@ -12,8 +12,6 @@ export default function ContactUs() {
     message: "",
   });
   const [submittedData, setSubmittedData] = useState(null);
-  // ── We'll store a snapshot of what the user submitted here,
-  //     so the overlay can read from it even after `formData` is cleared.
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState(null);

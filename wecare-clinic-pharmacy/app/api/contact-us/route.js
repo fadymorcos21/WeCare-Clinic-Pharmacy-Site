@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
+    console.log("Try");
+    console.log(process.env.CONTACT_US_API_URL);
     const body = await request.json();
     console.log("CONTACT_US_API_URL:", process.env.CONTACT_US_API_URL);
 
