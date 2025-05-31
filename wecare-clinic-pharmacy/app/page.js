@@ -14,6 +14,7 @@ import TestimonialsAndStats from "@/components/home/TestimonialsAndStats";
 import { Star, Users, CalendarCheck, MessageSquare } from "lucide-react";
 import Footer from "@/components/Footer";
 import { Menu, X } from "lucide-react";
+import InfoSection from "@/components/InfoSection";
 
 const stats = [
   {

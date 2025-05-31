@@ -86,7 +86,7 @@ export default function InfoSection() {
                       Schedule Assessment
                     </button>
                   </Link>
-                  <Link href="/minor-ailments">
+                  <Link href="/pharmacy/minor-ailments">
                     <button className="inline-block bg-[#155dfc] text-white font-bold py-3 px-6 rounded-full shadow border border-[#155dfc] hover:border hover:bg-white hover:text-[#155dfc] transition-transform hover:scale-105">
                       See All Minor Ailments
                     </button>
