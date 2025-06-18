@@ -28,7 +28,7 @@ export default function PharmacySplitSection() {
             </a>
           </div>
           <div className="text-lg font-semibold pt-2">
-            Or call us: +1 (905) 275-1935
+            Or call us: +1 (905) 275-7555
           </div>
         </div>
 
@@ -60,7 +60,7 @@ export default function PharmacySplitSection() {
             call now to get the help you need—no matter if it’s a new
             prescription or a refill.
           </p>
-          <div className="text-lg font-semibold">Phone: (905) 275-1935</div>
+          <div className="text-lg font-semibold">Phone: (905) 275-7555</div>
         </div>
       </div>
     </div>
